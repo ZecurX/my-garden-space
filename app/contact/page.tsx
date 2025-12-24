@@ -48,16 +48,16 @@ export default function ContactPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-36 pb-20 bg-[var(--bg-cream)]">
+            <section className="relative pt-40 pb-20 bg-[var(--bg-cream)]">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-5">
+                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-6">
                             Get In Touch
                         </span>
-                        <h1 className="font-display font-normal mb-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
                             Let&apos;s Talk About Your
                             <br />
-                            <span className="text-[var(--primary-600)] italic">Dream Garden</span>
+                            <span className="text-[var(--primary-600)]">Dream Garden</span>
                         </h1>
                         <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto">
                             Have a project in mind? Need a quote? We&apos;d love to hear from
@@ -68,12 +68,12 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Content */}
-            <section className="section-padding bg-white">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
                         {/* Contact Form */}
                         <div>
-                            <h2 className="text-2xl font-display font-medium mb-8 text-[var(--text-primary)]">
+                            <h2 className="text-2xl font-semibold mb-10 text-[var(--text-primary)]">
                                 Send Us a Message
                             </h2>
                             <ContactForm />
@@ -81,7 +81,7 @@ export default function ContactPage() {
 
                         {/* Contact Info */}
                         <div>
-                            <h2 className="text-2xl font-display font-medium mb-8 text-[var(--text-primary)]">
+                            <h2 className="text-2xl font-semibold mb-10 text-[var(--text-primary)]">
                                 Contact Information
                             </h2>
 

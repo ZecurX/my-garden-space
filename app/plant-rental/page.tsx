@@ -110,20 +110,20 @@ export default function PlantRentalPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-b from-[var(--primary-800)] to-[var(--primary-900)]">
-                <div className="container mx-auto px-4 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <section className="relative pt-40 pb-24 bg-gradient-to-b from-[var(--primary-800)] to-[var(--primary-900)]">
+                <div className="container mx-auto px-6 lg:px-12">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="text-center lg:text-left">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-8">
                                 <Flower2 className="w-4 h-4 text-[var(--primary-300)]" />
                                 Plant Rental Service
                             </span>
-                            <h1 className="font-serif text-white mb-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                                 Rent Plants for
                                 <br />
                                 <span className="text-[var(--primary-300)]">Any Occasion</span>
                             </h1>
-                            <p className="text-lg text-white/80 mb-8">
+                            <p className="text-lg text-white/80 mb-10 max-w-lg">
                                 Transform any space with beautiful plants. No long-term
                                 commitment, no hassle. We handle everything from delivery to
                                 maintenance.
@@ -161,8 +161,8 @@ export default function PlantRentalPage() {
             </section>
 
             {/* Use Cases */}
-            <section className="section-padding bg-white">
-                <div className="container mx-auto px-4 lg:px-8">
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 lg:px-12">
                     <SectionHeading
                         label="Use Cases"
                         title="Perfect for Every Occasion"
@@ -203,8 +203,8 @@ export default function PlantRentalPage() {
             </section>
 
             {/* Plant Categories */}
-            <section className="section-padding bg-[var(--bg-secondary)]">
-                <div className="container mx-auto px-4 lg:px-8">
+            <section className="py-24 bg-[var(--bg-secondary)]">
+                <div className="container mx-auto px-6 lg:px-12">
                     <SectionHeading
                         label="What We Offer"
                         title="Rental Categories"
@@ -239,8 +239,8 @@ export default function PlantRentalPage() {
             </section>
 
             {/* What's Included */}
-            <section className="section-padding bg-white">
-                <div className="container mx-auto px-4 lg:px-8">
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6 lg:px-12">
                     <SectionHeading
                         label="All Inclusive"
                         title="What's Included"
@@ -252,10 +252,10 @@ export default function PlantRentalPage() {
                             const Icon = item.icon;
                             return (
                                 <div key={index} className="text-center">
-                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--primary-100)] mb-4">
+                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--primary-100)] mb-6">
                                         <Icon className="w-8 h-8 text-[var(--primary-600)]" />
                                     </div>
-                                    <h3 className="text-lg font-semibold mb-2 text-[var(--text-primary)]">
+                                    <h3 className="text-lg font-semibold mb-3 text-[var(--text-primary)]">
                                         {item.title}
                                     </h3>
                                     <p className="text-[var(--text-secondary)]">
@@ -269,9 +269,9 @@ export default function PlantRentalPage() {
             </section>
 
             {/* Rental Info */}
-            <section className="section-padding bg-[var(--primary-50)]">
-                <div className="container mx-auto px-4 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <section className="py-24 bg-[var(--primary-50)]">
+                <div className="container mx-auto px-6 lg:px-12">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <SectionHeading
                                 label="Rental Details"
@@ -322,11 +322,11 @@ export default function PlantRentalPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-3xl p-8 shadow-lg">
-                            <h3 className="text-2xl font-serif font-semibold mb-6 text-[var(--text-primary)]">
+                        <div className="bg-white rounded-3xl p-10 shadow-lg">
+                            <h3 className="text-2xl font-semibold mb-8 text-[var(--text-primary)]">
                                 Rental Information
                             </h3>
-                            <div className="space-y-4">
+                            <div className="space-y-5">
                                 <div className="flex items-start gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-[var(--primary-600)] mt-0.5" />
                                     <div>
@@ -361,12 +361,12 @@ export default function PlantRentalPage() {
             </section>
 
             {/* Inquiry Form CTA */}
-            <section id="inquiry-form" className="section-padding bg-[var(--primary-900)]">
-                <div className="container mx-auto px-4 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+            <section id="inquiry-form" className="py-24 bg-[var(--primary-900)]">
+                <div className="container mx-auto px-6 lg:px-12 text-center">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
                         Ready to Rent Plants?
                     </h2>
-                    <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+                    <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
                         Contact us with your requirements and we&apos;ll provide a
                         customized quote within 24 hours.
                     </p>

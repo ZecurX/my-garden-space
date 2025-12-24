@@ -59,19 +59,17 @@ export default function Hero() {
                         <h1
                             style={{
                                 fontSize: "clamp(48px, 7vw, 90px)",
-                                fontWeight: 300,
+                                fontWeight: 700,
                                 color: "white",
                                 lineHeight: 1.1,
                                 letterSpacing: "-0.02em"
                             }}
-                            className="font-display"
                         >
                             Transform Your
                             <br />
                             <span style={{
                                 color: "var(--primary-400)",
-                                fontStyle: "italic",
-                                fontWeight: 400
+                                fontWeight: 700
                             }}>
                                 Outdoor Space
                             </span>
@@ -169,11 +167,10 @@ export default function Hero() {
                                     <div
                                         style={{
                                             fontSize: "clamp(36px, 4vw, 52px)",
-                                            fontWeight: 300,
+                                            fontWeight: 700,
                                             color: "white",
                                             letterSpacing: "-0.02em"
                                         }}
-                                        className="font-display"
                                     >
                                         {stat.value}
                                     </div>

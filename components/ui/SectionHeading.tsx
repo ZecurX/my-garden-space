@@ -48,7 +48,7 @@ export function SectionHeading({
             )}
             <h2
                 className={cn(
-                    "font-display font-normal mb-5",
+                    "text-3xl md:text-4xl font-bold mb-5",
                     dark ? "text-white" : "text-[var(--text-primary)]"
                 )}
             >

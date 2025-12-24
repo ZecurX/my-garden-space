@@ -119,7 +119,7 @@ export default function TestimonialCarousel() {
                                     <div className="flex-1 text-center md:text-left">
                                         <StarRating rating={testimonials[currentIndex].rating} size="md" />
 
-                                        <p className="mt-5 text-lg md:text-xl font-display text-[var(--text-primary)] leading-relaxed">
+                                        <p className="mt-5 text-lg md:text-xl text-[var(--text-primary)] leading-relaxed">
                                             &ldquo;{testimonials[currentIndex].quote}&rdquo;
                                         </p>
 

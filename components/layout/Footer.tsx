@@ -75,10 +75,9 @@ export default function Footer() {
                             <span
                                 style={{
                                     fontSize: "24px",
-                                    fontWeight: 500,
+                                    fontWeight: 600,
                                     color: "white"
                                 }}
-                                className="font-display"
                             >
                                 My Garden Space
                             </span>

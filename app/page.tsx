@@ -2,7 +2,7 @@ import Hero from "@/components/home/Hero";
 import ServiceHighlights from "@/components/home/ServiceHighlights";
 import PlantRentalBanner from "@/components/home/PlantRentalBanner";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import TestimonialCarousel from "@/components/home/TestimonialCarousel";
+import TestimonialsScrolling from "@/components/ui/TestimonialsScrolling";
 import CTABanner from "@/components/home/CTABanner";
 
 export default function HomePage() {
@@ -21,7 +21,7 @@ export default function HomePage() {
       <PlantRentalBanner />
 
       {/* Testimonials */}
-      <TestimonialCarousel />
+      <TestimonialsScrolling />
 
       {/* CTA Banner */}
       <CTABanner />

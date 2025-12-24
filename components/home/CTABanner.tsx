@@ -57,19 +57,17 @@ export default function CTABanner() {
                     <h2
                         style={{
                             fontSize: "clamp(36px, 5vw, 64px)",
-                            fontWeight: 300,
+                            fontWeight: 700,
                             color: "white",
                             marginBottom: "40px",
                             lineHeight: 1.1
                         }}
-                        className="font-display"
                     >
                         Ready to Create Your
                         <br />
                         <span style={{
                             color: "var(--primary-400)",
-                            fontStyle: "italic",
-                            fontWeight: 400
+                            fontWeight: 700
                         }}>
                             Dream Garden?
                         </span>

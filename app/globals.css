@@ -66,12 +66,8 @@ body {
 }
 
 /* ============================================
-   TYPOGRAPHY
+   TYPOGRAPHY - Inter for everything
    ============================================ */
-
-.font-display {
-  font-family: var(--font-playfair), Georgia, serif !important;
-}
 
 /* ============================================
    BUTTON STYLES
@@ -145,6 +141,57 @@ body {
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-error {
+  font-size: 0.875rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
 }
 
 /* ============================================

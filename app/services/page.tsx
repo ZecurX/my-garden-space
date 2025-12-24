@@ -175,18 +175,16 @@ export default function ServicesPage() {
                         <h1
                             style={{
                                 fontSize: "clamp(40px, 6vw, 64px)",
-                                fontWeight: 300,
+                                fontWeight: 700,
                                 color: "var(--text-primary)",
                                 marginBottom: "40px",
                                 lineHeight: 1.1
                             }}
-                            className="font-display"
                         >
                             Comprehensive Gardening &
                             <br />
                             <span style={{
-                                color: "var(--primary-600)",
-                                fontStyle: "italic"
+                                color: "var(--primary-600)"
                             }}>
                                 Landscaping Solutions
                             </span>
@@ -287,10 +285,9 @@ export default function ServicesPage() {
                                             <h2
                                                 style={{
                                                     fontSize: "clamp(28px, 4vw, 40px)",
-                                                    fontWeight: 500,
+                                                    fontWeight: 600,
                                                     color: "var(--text-primary)"
                                                 }}
-                                                className="font-display"
                                             >
                                                 {category.title}
                                             </h2>
@@ -384,12 +381,11 @@ export default function ServicesPage() {
                     <h2
                         style={{
                             fontSize: "clamp(36px, 5vw, 56px)",
-                            fontWeight: 300,
+                            fontWeight: 700,
                             color: "white",
                             marginBottom: "32px",
                             lineHeight: 1.2
                         }}
-                        className="font-display"
                     >
                         Not Sure What You Need?
                     </h2>

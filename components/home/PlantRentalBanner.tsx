@@ -78,19 +78,17 @@ export default function PlantRentalBanner() {
                         <h2
                             style={{
                                 fontSize: "clamp(36px, 5vw, 60px)",
-                                fontWeight: 300,
+                                fontWeight: 700,
                                 color: "white",
                                 marginBottom: "40px",
                                 lineHeight: 1.1
                             }}
-                            className="font-display"
                         >
                             Rent Plants for
                             <br />
                             <span style={{
                                 color: "var(--primary-400)",
-                                fontStyle: "italic",
-                                fontWeight: 400
+                                fontWeight: 700
                             }}>
                                 Any Occasion
                             </span>
@@ -282,10 +280,9 @@ export default function PlantRentalBanner() {
                                     <div
                                         style={{
                                             fontSize: "32px",
-                                            fontWeight: 500,
+                                            fontWeight: 700,
                                             color: "var(--primary-700)"
                                         }}
-                                        className="font-display"
                                     >
                                         ₹99
                                     </div>

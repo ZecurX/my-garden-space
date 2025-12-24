@@ -38,6 +38,13 @@ export default function Navbar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const pathname = usePathname();
 
+    // Pages that have a light/white background hero section
+    const lightBackgroundPages = ["/services", "/gallery", "/contact", "/about", "/testimonials", "/thank-you"];
+    const isLightPage = lightBackgroundPages.some(page => pathname.startsWith(page));
+
+    // For light pages, always use dark text. For dark pages, use white text until scrolled.
+    const useDarkText = isLightPage || isScrolled;
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -62,8 +69,8 @@ export default function Navbar() {
                     right: 0,
                     zIndex: 50,
                     transition: "all 0.5s ease",
-                    backgroundColor: isScrolled ? "rgba(255, 255, 255, 0.97)" : "transparent",
-                    backdropFilter: isScrolled ? "blur(20px)" : "none",
+                    backgroundColor: (isScrolled || isLightPage) ? "rgba(255, 255, 255, 0.97)" : "transparent",
+                    backdropFilter: (isScrolled || isLightPage) ? "blur(20px)" : "none",
                     boxShadow: isScrolled ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
                     padding: isScrolled ? "20px 0" : "32px 0",
                 }}
@@ -93,8 +100,8 @@ export default function Navbar() {
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    backgroundColor: isScrolled ? "var(--primary-600)" : "rgba(255,255,255,0.2)",
-                                    backdropFilter: isScrolled ? "none" : "blur(10px)",
+                                    backgroundColor: useDarkText ? "var(--primary-600)" : "rgba(255,255,255,0.2)",
+                                    backdropFilter: useDarkText ? "none" : "blur(10px)",
                                     transition: "all 0.3s ease"
                                 }}
                             >
@@ -107,12 +114,11 @@ export default function Navbar() {
                             <span
                                 style={{
                                     fontSize: "22px",
-                                    fontWeight: 500,
+                                    fontWeight: 600,
                                     letterSpacing: "-0.02em",
-                                    color: isScrolled ? "var(--text-primary)" : "white",
+                                    color: useDarkText ? "var(--text-primary)" : "white",
                                     transition: "color 0.3s ease"
                                 }}
-                                className="font-display"
                             >
                                 My Garden Space
                             </span>
@@ -144,10 +150,10 @@ export default function Navbar() {
                                             textDecoration: "none",
                                             transition: "all 0.2s ease",
                                             color: pathname === item.href || (item.hasDropdown && pathname.startsWith("/services"))
-                                                ? isScrolled ? "var(--primary-700)" : "white"
-                                                : isScrolled ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
+                                                ? useDarkText ? "var(--primary-700)" : "white"
+                                                : useDarkText ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
                                             backgroundColor: pathname === item.href || (item.hasDropdown && pathname.startsWith("/services"))
-                                                ? isScrolled ? "var(--primary-50)" : "rgba(255,255,255,0.15)"
+                                                ? useDarkText ? "var(--primary-50)" : "rgba(255,255,255,0.15)"
                                                 : "transparent"
                                         }}
                                     >
@@ -227,7 +233,7 @@ export default function Navbar() {
                                     display: "flex",
                                     alignItems: "center",
                                     gap: "12px",
-                                    color: isScrolled ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
+                                    color: useDarkText ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
                                     textDecoration: "none",
                                     transition: "color 0.2s ease"
                                 }}
@@ -244,8 +250,8 @@ export default function Navbar() {
                                     borderRadius: "9999px",
                                     textDecoration: "none",
                                     transition: "all 0.2s ease",
-                                    backgroundColor: isScrolled ? "var(--primary-700)" : "white",
-                                    color: isScrolled ? "white" : "var(--text-primary)"
+                                    backgroundColor: useDarkText ? "var(--primary-700)" : "white",
+                                    color: useDarkText ? "white" : "var(--text-primary)"
                                 }}
                             >
                                 Get Quote
@@ -262,7 +268,7 @@ export default function Navbar() {
                                 border: "none",
                                 background: "transparent",
                                 cursor: "pointer",
-                                color: isScrolled ? "var(--text-primary)" : "white",
+                                color: useDarkText ? "var(--text-primary)" : "white",
                                 transition: "all 0.3s ease"
                             }}
                             className="lg:!hidden"
@@ -328,9 +334,9 @@ export default function Navbar() {
                                 </div>
                                 <span style={{
                                     fontSize: "20px",
-                                    fontWeight: 500,
+                                    fontWeight: 600,
                                     color: "var(--text-primary)"
-                                }} className="font-display">
+                                }}>
                                     My Garden Space
                                 </span>
                             </Link>

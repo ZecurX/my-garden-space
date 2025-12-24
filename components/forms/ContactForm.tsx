@@ -47,7 +47,7 @@ export default function ContactForm() {
                 <div className="w-16 h-16 bg-[var(--primary-100)] rounded-full flex items-center justify-center mx-auto mb-5">
                     <CheckCircle className="w-8 h-8 text-[var(--primary-600)]" />
                 </div>
-                <h3 className="text-xl font-display font-medium text-[var(--text-primary)] mb-2">
+                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
                     Message Sent!
                 </h3>
                 <p className="text-[var(--text-secondary)]">

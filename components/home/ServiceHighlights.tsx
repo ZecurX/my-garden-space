@@ -99,12 +99,11 @@ export default function ServiceHighlights() {
                     <h2
                         style={{
                             fontSize: "clamp(36px, 5vw, 56px)",
-                            fontWeight: 300,
+                            fontWeight: 700,
                             color: "var(--text-primary)",
                             marginBottom: "32px",
                             lineHeight: 1.2
                         }}
-                        className="font-display"
                     >
                         Our Service Expertise
                     </h2>
@@ -177,11 +176,10 @@ export default function ServiceHighlights() {
                                     <h3
                                         style={{
                                             fontSize: "22px",
-                                            fontWeight: 500,
+                                            fontWeight: 600,
                                             color: "var(--text-primary)",
                                             marginBottom: "16px"
                                         }}
-                                        className="font-display"
                                     >
                                         {service.title}
                                     </h3>

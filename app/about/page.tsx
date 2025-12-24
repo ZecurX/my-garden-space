@@ -65,16 +65,16 @@ export default function AboutPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-36 pb-24 bg-[var(--bg-cream)]">
+            <section className="relative pt-40 pb-24 bg-[var(--bg-cream)]">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-5">
+                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-6">
                             About My Garden Space
                         </span>
-                        <h1 className="font-display font-normal mb-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
                             Transforming Spaces,
                             <br />
-                            <span className="text-[var(--primary-600)] italic">Creating Dreams</span>
+                            <span className="text-[var(--primary-600)]">Creating Dreams</span>
                         </h1>
                         <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto">
                             We are passionate about bringing nature closer to you. With over a
@@ -91,7 +91,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center">
-                                <div className="text-4xl lg:text-5xl font-display font-normal text-[var(--primary-700)] mb-2">
+                                <div className="text-4xl lg:text-5xl font-bold text-[var(--primary-700)] mb-2">
                                     {stat.value}
                                 </div>
                                 <div className="text-sm text-[var(--text-muted)] font-medium tracking-wide">
@@ -120,7 +120,7 @@ export default function AboutPage() {
                             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[180px]">
                                 <div className="flex items-center gap-3 mb-2">
                                     <Award className="w-8 h-8 text-[var(--primary-600)]" />
-                                    <div className="text-3xl font-display font-normal text-[var(--primary-700)]">
+                                    <div className="text-3xl font-bold text-[var(--primary-700)]">
                                         10+
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@ export default function AboutPage() {
                                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--neutral-50)] mb-6">
                                         <Icon className="w-7 h-7 text-[var(--primary-600)]" />
                                     </div>
-                                    <h3 className="text-xl font-display font-medium mb-3 text-[var(--text-primary)]">
+                                    <h3 className="text-xl font-semibold mb-3 text-[var(--text-primary)]">
                                         {value.title}
                                     </h3>
                                     <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
@@ -212,7 +212,7 @@ export default function AboutPage() {
                     <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-400)] mb-5">
                         Let&apos;s Work Together
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-display font-normal text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                         Ready to Transform Your Space?
                     </h2>
                     <p className="text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">

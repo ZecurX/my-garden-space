@@ -93,7 +93,7 @@ export default function WhyChooseUs() {
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-xl font-display font-medium mb-3 text-[var(--text-primary)]">
+                                <h3 className="text-xl font-semibold mb-3 text-[var(--text-primary)]">
                                     {reason.title}
                                 </h3>
                                 <p className="text-[var(--text-secondary)] leading-relaxed max-w-sm mx-auto">

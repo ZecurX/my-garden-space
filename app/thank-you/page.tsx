@@ -16,7 +16,7 @@ export default function ThankYouPage() {
                         <CheckCircle className="w-10 h-10 text-[var(--primary-600)]" />
                     </div>
 
-                    <h1 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text-primary)] mb-4 animate-fade-in-up">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4 animate-fade-in-up">
                         Thank You!
                     </h1>
 
