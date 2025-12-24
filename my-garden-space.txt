@@ -1,0 +1,267 @@
+My Garden Space – Website Requirements Document
+1. Project Overview
+Project Name: My Garden Space​
+Business Type: Garden & Landscaping Services + Plant Rental​
+Objective: Build a professional, user-friendly website to showcase gardening and
+landscaping services, enable plant rentals, generate service inquiries, and build trust
+with customers.
+The website should help convert visitors into leads, allow easy service discovery, and
+support future scalability
+
+2. Target Audience
+●​
+●​
+●​
+●​
+●​
+
+Homeowners (independent houses & villas)
+Apartment associations
+Commercial spaces (offices, cafes, hotels)
+Event planners (for plant rentals)
+Real estate developers
+
+3. Core Features & Pages
+3.1 Public Website Pages
+3.1.1 Home Page
+●​
+●​
+●​
+●​
+●​
+●​
+●​
+
+Hero section with nature-themed visuals
+Tagline & brief intro of My Garden Space
+Key services highlights
+Plant rental highlight section
+Why choose us (trust factors)
+Testimonials
+CTA buttons (Book Service / Get Quote / Rent Plants)
+
+3.1.2 About Us
+●​
+●​
+●​
+●​
+
+Company story & mission
+Experience & expertise
+Team / gardeners info (optional)
+Sustainability & eco-friendly practices
+
+3.1.3 Services Page
+List of services most garden & landscaping businesses provide:
+A. Gardening & Maintenance Services
+●​
+●​
+●​
+●​
+●​
+●​
+
+Garden maintenance (weekly/monthly)
+Lawn mowing & lawn care
+Pruning & trimming
+Weed control
+Fertilization & soil treatment
+Seasonal plant care
+
+B. Landscaping & Outdoor Development Services
+●​
+●​
+●​
+●​
+●​
+
+Garden design & planning
+Landscape execution
+Front yard garden design & execution
+Backyard garden design & execution
+Garden renovation & remodeling
+
+C. Lawn & Ground Solutions
+●​
+●​
+●​
+●​
+
+Natural lawn development
+Artificial grass installation
+Stones laying & pathway development
+Soil preparation & leveling
+
+D. Structural & Decorative Garden Elements
+●​
+●​
+●​
+●​
+●​
+●​
+
+Picket fence installation
+Pergola installation
+Gazebo installation
+Lattice structures
+Cladding (decorative & protective)
+WPC decking
+
+E. Water Features & Luxury Add-ons
+●​
+●​
+●​
+●​
+
+Pond design & construction
+Fountain installation
+Swimming pool landscaping support
+Water body features & accents
+
+F. Vertical & Artificial Green Solutions
+
+●​ Vertical garden installation
+●​ Artificial wall garden
+●​ Balcony & terrace garden setup
+G. Pots & Accessories
+●​ FRP pots supply & installation
+●​ Decorative planters
+●​ Custom pot solutions
+H. Irrigation & Smart Gardening
+●​ Drip irrigation systems
+●​ Sprinkler systems
+●​ Water-efficient garden solutions
+Each service page should include:
+●​
+●​
+●​
+●​
+●​
+●​
+
+Service description
+Use cases (residential / commercial)
+Process & materials used
+Maintenance requirements
+Pricing (optional / starting from)
+CTA (Get a Quote / Enquire Now)
+
+3.1.4 Plant Rental Page (Core Feature)
+●​ Rent plants for:
+○​ Events & weddings
+○​ Offices & coworking spaces
+○​ Homes & apartments
+○​ Exhibitions & showrooms
+Rental Categories:
+●​
+●​
+●​
+●​
+
+Indoor plants
+Outdoor plants
+Decorative & flowering plants
+Large statement plants
+
+Features:
+●​
+●​
+●​
+●​
+
+Rental duration options (daily / weekly / monthly)
+Minimum rental quantity
+Maintenance included info
+Inquiry form for rental quote
+
+3.1.5 Gallery
+●​
+●​
+●​
+●​
+
+Completed projects
+Before/after images
+Event plant setups
+Categorized gallery
+
+3.1.6 Testimonials
+●​ Customer reviews
+●​ Ratings
+●​ Client logos (if any)
+3.1.7 Blog / Tips (Optional but recommended)
+●​
+●​
+●​
+●​
+
+Gardening tips
+Seasonal care guides
+Indoor plant care
+SEO-focused content
+
+3.1.8 Contact Us
+●​
+●​
+●​
+●​
+●​
+
+Contact form
+Phone & WhatsApp integration
+Email
+Google Maps location
+Business hours
+
+4. Functional Requirements
+4.1 Forms & Lead Generation
+●​
+●​
+●​
+●​
+●​
+
+Service inquiry form
+Plant rental inquiry form
+Contact form
+Forms should send emails to admin
+Optional CRM integration later
+
+4.2 Admin Panel
+●​ Manage services content
+●​ Upload & manage gallery images
+●​ Manage plant rental listings
+4.3 SEO & Performance
+
+●​
+●​
+●​
+●​
+
+SEO-friendly URLs
+Meta tags & descriptions
+Fast loading speed
+Mobile-first responsive design
+
+5. Non-Functional Requirements
+●​
+●​
+●​
+●​
+●​
+
+Fully responsive (mobile, tablet, desktop)
+Secure forms (spam protection)
+Easy navigation
+Minimalistic, nature-inspired UI
+Green & earthy color palette
+
+6. Tech Stack (Suggested)
+●​ Frontend&Backend: Next.js
+●​ Hosting: Vercel
+●​ Image storage: Cloudinary
+
+Prepared for: My Garden Space​
+Document Type: Website Requirement Specification
+
+

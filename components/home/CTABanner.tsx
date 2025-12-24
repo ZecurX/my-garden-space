@@ -6,52 +6,137 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTABanner() {
     return (
-        <section className="relative py-20 overflow-hidden">
+        <section style={{
+            position: "relative",
+            padding: "160px 0",
+            overflow: "hidden"
+        }}>
             {/* Background */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-fixed"
                 style={{
+                    position: "absolute",
+                    inset: 0,
                     backgroundImage: `url('https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundAttachment: "fixed"
                 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary-900)]/90 to-[var(--primary-800)]/80" />
+            {/* Dark overlay */}
+            <div style={{
+                position: "absolute",
+                inset: 0,
+                backgroundColor: "rgba(0,0,0,0.65)"
+            }} />
 
-            <div className="relative container mx-auto px-4 lg:px-8">
-                <div className="max-w-3xl mx-auto text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+            <div style={{
+                position: "relative",
+                maxWidth: "1000px",
+                margin: "0 auto",
+                padding: "0 40px",
+                textAlign: "center"
+            }}>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <span style={{
+                        display: "inline-block",
+                        fontSize: "12px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.15em",
+                        color: "var(--primary-400)",
+                        marginBottom: "32px"
+                    }}>
+                        Get Started Today
+                    </span>
+
+                    <h2
+                        style={{
+                            fontSize: "clamp(36px, 5vw, 64px)",
+                            fontWeight: 300,
+                            color: "white",
+                            marginBottom: "40px",
+                            lineHeight: 1.1
+                        }}
+                        className="font-display"
                     >
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6">
-                            Ready to Create Your
-                            <br />
-                            <span className="text-[var(--primary-300)]">Dream Garden?</span>
-                        </h2>
-                        <p className="text-lg text-white/80 mb-10 max-w-xl mx-auto">
-                            Let&apos;s discuss your project and bring your outdoor vision to
-                            life. Get a free consultation and quote today.
-                        </p>
+                        Ready to Create Your
+                        <br />
+                        <span style={{
+                            color: "var(--primary-400)",
+                            fontStyle: "italic",
+                            fontWeight: 400
+                        }}>
+                            Dream Garden?
+                        </span>
+                    </h2>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Link
-                                href="/contact"
-                                className="btn btn-white btn-lg group w-full sm:w-auto"
-                            >
-                                Get Free Quote
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                            <a
-                                href="tel:+919880220257"
-                                className="btn btn-lg w-full sm:w-auto !border-white !text-white hover:!bg-white/10 bg-transparent border-2"
-                            >
-                                <Phone className="w-5 h-5" />
-                                Call Now
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
+                    <p style={{
+                        fontSize: "18px",
+                        color: "rgba(255,255,255,0.85)",
+                        marginBottom: "56px",
+                        maxWidth: "600px",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        lineHeight: 1.7
+                    }}>
+                        Let&apos;s discuss your project and bring your outdoor vision to
+                        life. Get a free consultation and quote today.
+                    </p>
+
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "24px",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    }} className="sm:!flex-row">
+                        <Link
+                            href="/contact"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                padding: "22px 44px",
+                                backgroundColor: "white",
+                                color: "var(--text-primary)",
+                                borderRadius: "9999px",
+                                fontWeight: 600,
+                                fontSize: "16px",
+                                textDecoration: "none",
+                                boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
+                                transition: "all 0.2s ease"
+                            }}
+                        >
+                            Get Free Quote
+                            <ArrowRight style={{ width: "20px", height: "20px" }} />
+                        </Link>
+                        <a
+                            href="tel:+919880220257"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                padding: "22px 44px",
+                                backgroundColor: "transparent",
+                                color: "white",
+                                border: "2px solid rgba(255,255,255,0.4)",
+                                borderRadius: "9999px",
+                                fontWeight: 600,
+                                fontSize: "16px",
+                                textDecoration: "none",
+                                transition: "all 0.2s ease"
+                            }}
+                        >
+                            <Phone style={{ width: "20px", height: "20px" }} />
+                            Call Now
+                        </a>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -26,16 +26,21 @@ export function SectionHeading({
 
     return (
         <div
-            className={cn("max-w-3xl mb-12", alignClasses[align], align === "center" && "mx-auto", className)}
+            className={cn(
+                "max-w-3xl mb-14",
+                alignClasses[align],
+                align === "center" && "mx-auto",
+                className
+            )}
             {...props}
         >
             {label && (
                 <span
                     className={cn(
-                        "inline-block text-sm font-semibold uppercase tracking-wider mb-3 px-3 py-1 rounded-full",
+                        "inline-block text-xs font-semibold uppercase tracking-widest mb-4",
                         dark
-                            ? "bg-white/10 text-white/80"
-                            : "bg-[var(--primary-100)] text-[var(--primary-700)]"
+                            ? "text-white/60"
+                            : "text-[var(--primary-600)]"
                     )}
                 >
                     {label}
@@ -43,7 +48,7 @@ export function SectionHeading({
             )}
             <h2
                 className={cn(
-                    "font-serif mb-4",
+                    "font-display font-normal mb-5",
                     dark ? "text-white" : "text-[var(--text-primary)]"
                 )}
             >
@@ -52,8 +57,9 @@ export function SectionHeading({
             {subtitle && (
                 <p
                     className={cn(
-                        "text-lg",
-                        dark ? "text-white/70" : "text-[var(--text-secondary)]"
+                        "text-lg leading-relaxed max-w-2xl",
+                        align === "center" && "mx-auto",
+                        dark ? "text-white/65" : "text-[var(--text-secondary)]"
                     )}
                 >
                     {subtitle}

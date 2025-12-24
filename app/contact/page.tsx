@@ -48,19 +48,18 @@ export default function ContactPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-32 pb-16 bg-gradient-to-b from-[var(--primary-50)] to-white">
-                <div className="container mx-auto px-4 lg:px-8">
+            <section className="relative pt-36 pb-20 bg-[var(--bg-cream)]">
+                <div className="container mx-auto px-6 lg:px-12">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary-100)] text-[var(--primary-700)] text-sm font-medium mb-6">
-                            <MessageCircle className="w-4 h-4" />
+                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-5">
                             Get In Touch
                         </span>
-                        <h1 className="font-serif mb-6">
+                        <h1 className="font-display font-normal mb-6">
                             Let&apos;s Talk About Your
                             <br />
-                            <span className="text-[var(--primary-600)]">Dream Garden</span>
+                            <span className="text-[var(--primary-600)] italic">Dream Garden</span>
                         </h1>
-                        <p className="text-lg text-[var(--text-secondary)]">
+                        <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto">
                             Have a project in mind? Need a quote? We&apos;d love to hear from
                             you. Reach out and we&apos;ll respond as soon as we can.
                         </p>
@@ -70,11 +69,11 @@ export default function ContactPage() {
 
             {/* Contact Content */}
             <section className="section-padding bg-white">
-                <div className="container mx-auto px-4 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <div className="container mx-auto px-6 lg:px-12">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
                         {/* Contact Form */}
                         <div>
-                            <h2 className="text-2xl font-serif font-semibold mb-6 text-[var(--text-primary)]">
+                            <h2 className="text-2xl font-display font-medium mb-8 text-[var(--text-primary)]">
                                 Send Us a Message
                             </h2>
                             <ContactForm />
@@ -82,26 +81,26 @@ export default function ContactPage() {
 
                         {/* Contact Info */}
                         <div>
-                            <h2 className="text-2xl font-serif font-semibold mb-6 text-[var(--text-primary)]">
+                            <h2 className="text-2xl font-display font-medium mb-8 text-[var(--text-primary)]">
                                 Contact Information
                             </h2>
 
-                            <div className="space-y-6 mb-8">
+                            <div className="space-y-6 mb-10">
                                 {contactInfo.map((item, index) => {
                                     const Icon = item.icon;
                                     return (
                                         <div key={index} className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-[var(--primary-100)] flex items-center justify-center flex-shrink-0">
-                                                <Icon className="w-6 h-6 text-[var(--primary-600)]" />
+                                            <div className="w-12 h-12 rounded-xl bg-[var(--neutral-50)] flex items-center justify-center flex-shrink-0">
+                                                <Icon className="w-5 h-5 text-[var(--primary-600)]" />
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-[var(--text-primary)]">
+                                                <h3 className="font-medium text-[var(--text-primary)] mb-0.5">
                                                     {item.title}
                                                 </h3>
                                                 {item.href ? (
                                                     <a
                                                         href={item.href}
-                                                        className="text-[var(--primary-600)] hover:underline"
+                                                        className="text-[var(--primary-600)] hover:text-[var(--primary-700)] transition-colors"
                                                     >
                                                         {item.content}
                                                     </a>
@@ -110,7 +109,7 @@ export default function ContactPage() {
                                                         {item.content}
                                                     </p>
                                                 )}
-                                                <p className="text-sm text-[var(--text-muted)]">
+                                                <p className="text-sm text-[var(--text-muted)] mt-0.5">
                                                     {item.description}
                                                 </p>
                                             </div>
@@ -124,10 +123,10 @@ export default function ContactPage() {
                                 href="https://wa.me/919880220257?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 px-6 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-medium transition-colors w-full justify-center mb-8"
+                                className="inline-flex items-center gap-3 px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-full font-medium transition-colors w-full justify-center mb-10"
                             >
                                 <svg
-                                    className="w-6 h-6"
+                                    className="w-5 h-5"
                                     fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
@@ -137,7 +136,7 @@ export default function ContactPage() {
                             </a>
 
                             {/* Map */}
-                            <div className="rounded-2xl overflow-hidden h-[250px]">
+                            <div className="rounded-2xl overflow-hidden h-[280px] border border-[var(--neutral-100)]">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1703420000000!5m2!1sen!2sin"
                                     width="100%"

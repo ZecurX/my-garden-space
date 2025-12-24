@@ -11,7 +11,6 @@ import {
     Wrench,
     ArrowRight,
 } from "lucide-react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
     title: "Our Services",
@@ -148,21 +147,57 @@ export default function ServicesPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-b from-[var(--primary-50)] to-white">
-                <div className="container mx-auto px-4 lg:px-8">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary-100)] text-[var(--primary-700)] text-sm font-medium mb-6">
-                            <Leaf className="w-4 h-4" />
+            <section style={{
+                padding: "180px 0 100px",
+                backgroundColor: "var(--bg-cream)"
+            }}>
+                <div style={{
+                    maxWidth: "1400px",
+                    margin: "0 auto",
+                    padding: "0 40px"
+                }}>
+                    <div style={{
+                        maxWidth: "900px",
+                        margin: "0 auto",
+                        textAlign: "center"
+                    }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "32px"
+                        }}>
                             Our Services
                         </span>
-                        <h1 className="font-serif mb-6">
+                        <h1
+                            style={{
+                                fontSize: "clamp(40px, 6vw, 64px)",
+                                fontWeight: 300,
+                                color: "var(--text-primary)",
+                                marginBottom: "40px",
+                                lineHeight: 1.1
+                            }}
+                            className="font-display"
+                        >
                             Comprehensive Gardening &
                             <br />
-                            <span className="text-[var(--primary-600)]">
+                            <span style={{
+                                color: "var(--primary-600)",
+                                fontStyle: "italic"
+                            }}>
                                 Landscaping Solutions
                             </span>
                         </h1>
-                        <p className="text-lg text-[var(--text-secondary)]">
+                        <p style={{
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.7,
+                            maxWidth: "650px",
+                            margin: "0 auto"
+                        }}>
                             From garden design to maintenance, we offer a complete range of
                             services to transform and nurture your outdoor spaces.
                         </p>
@@ -171,63 +206,150 @@ export default function ServicesPage() {
             </section>
 
             {/* Services Grid */}
-            <section className="section-padding bg-white">
-                <div className="container mx-auto px-4 lg:px-8">
-                    <div className="grid gap-8">
+            <section style={{
+                padding: "120px 0",
+                backgroundColor: "white"
+            }}>
+                <div style={{
+                    maxWidth: "1400px",
+                    margin: "0 auto",
+                    padding: "0 40px"
+                }}>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "120px"
+                    }}>
                         {categories.map((category, index) => {
                             const Icon = category.icon;
                             const isReversed = index % 2 === 1;
                             return (
                                 <div
                                     key={category.slug}
-                                    className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isReversed ? "lg:flex-row-reverse" : ""
-                                        }`}
+                                    style={{
+                                        display: "grid",
+                                        gridTemplateColumns: "1fr",
+                                        gap: "64px",
+                                        alignItems: "center"
+                                    }}
+                                    className="lg:!grid-cols-2"
                                 >
                                     {/* Image */}
                                     <div
-                                        className={`relative h-[300px] lg:h-[400px] rounded-3xl overflow-hidden ${isReversed ? "lg:order-2" : ""
-                                            }`}
+                                        style={{
+                                            position: "relative",
+                                            height: "450px",
+                                            borderRadius: "32px",
+                                            overflow: "hidden",
+                                            order: isReversed ? 1 : 0
+                                        }}
+                                        className={isReversed ? "lg:!order-2" : ""}
                                     >
                                         <div
-                                            className="absolute inset-0 bg-cover bg-center"
-                                            style={{ backgroundImage: `url('${category.image}')` }}
+                                            style={{
+                                                position: "absolute",
+                                                inset: 0,
+                                                backgroundImage: `url('${category.image}')`,
+                                                backgroundSize: "cover",
+                                                backgroundPosition: "center"
+                                            }}
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                                        <div style={{
+                                            position: "absolute",
+                                            inset: 0,
+                                            background: "linear-gradient(to top, rgba(0,0,0,0.3), transparent)"
+                                        }} />
                                     </div>
 
                                     {/* Content */}
-                                    <div className={isReversed ? "lg:order-1" : ""}>
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <div className="w-12 h-12 rounded-xl bg-[var(--primary-100)] flex items-center justify-center">
-                                                <Icon className="w-6 h-6 text-[var(--primary-600)]" />
+                                    <div style={{ order: isReversed ? 0 : 1 }} className={isReversed ? "lg:!order-1" : ""}>
+                                        <div style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: "24px",
+                                            marginBottom: "32px"
+                                        }}>
+                                            <div style={{
+                                                width: "72px",
+                                                height: "72px",
+                                                borderRadius: "20px",
+                                                backgroundColor: "var(--primary-50)",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center"
+                                            }}>
+                                                <Icon style={{
+                                                    width: "32px",
+                                                    height: "32px",
+                                                    color: "var(--primary-600)"
+                                                }} />
                                             </div>
-                                            <h2 className="text-2xl font-serif font-semibold text-[var(--text-primary)]">
+                                            <h2
+                                                style={{
+                                                    fontSize: "clamp(28px, 4vw, 40px)",
+                                                    fontWeight: 500,
+                                                    color: "var(--text-primary)"
+                                                }}
+                                                className="font-display"
+                                            >
                                                 {category.title}
                                             </h2>
                                         </div>
 
-                                        <p className="text-[var(--text-secondary)] mb-6">
+                                        <p style={{
+                                            fontSize: "18px",
+                                            color: "var(--text-secondary)",
+                                            marginBottom: "40px",
+                                            lineHeight: 1.7
+                                        }}>
                                             {category.description}
                                         </p>
 
-                                        <ul className="space-y-2 mb-6">
+                                        <ul style={{
+                                            listStyle: "none",
+                                            padding: 0,
+                                            margin: "0 0 48px 0"
+                                        }}>
                                             {category.services.map((service, idx) => (
                                                 <li
                                                     key={idx}
-                                                    className="flex items-center gap-2 text-[var(--text-primary)]"
+                                                    style={{
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        gap: "16px",
+                                                        color: "var(--text-primary)",
+                                                        marginBottom: "16px"
+                                                    }}
                                                 >
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-500)]" />
-                                                    {service}
+                                                    <span style={{
+                                                        width: "8px",
+                                                        height: "8px",
+                                                        borderRadius: "50%",
+                                                        backgroundColor: "var(--primary-500)"
+                                                    }} />
+                                                    <span style={{ fontSize: "16px" }}>{service}</span>
                                                 </li>
                                             ))}
                                         </ul>
 
                                         <Link
                                             href={`/services/${category.slug}`}
-                                            className="btn btn-primary inline-flex group"
+                                            style={{
+                                                display: "inline-flex",
+                                                alignItems: "center",
+                                                gap: "12px",
+                                                padding: "18px 36px",
+                                                backgroundColor: "var(--primary-700)",
+                                                color: "white",
+                                                borderRadius: "9999px",
+                                                fontWeight: 600,
+                                                fontSize: "15px",
+                                                textDecoration: "none",
+                                                transition: "background 0.2s ease"
+                                            }}
                                         >
                                             Explore Services
-                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                            <ArrowRight style={{ width: "20px", height: "20px" }} />
                                         </Link>
                                     </div>
                                 </div>
@@ -238,21 +360,68 @@ export default function ServicesPage() {
             </section>
 
             {/* CTA */}
-            <section className="section-padding bg-[var(--primary-900)]">
-                <div className="container mx-auto px-4 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+            <section style={{
+                padding: "120px 0",
+                backgroundColor: "var(--primary-950)"
+            }}>
+                <div style={{
+                    maxWidth: "900px",
+                    margin: "0 auto",
+                    padding: "0 40px",
+                    textAlign: "center"
+                }}>
+                    <span style={{
+                        display: "inline-block",
+                        fontSize: "12px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.15em",
+                        color: "var(--primary-400)",
+                        marginBottom: "32px"
+                    }}>
+                        Need Help?
+                    </span>
+                    <h2
+                        style={{
+                            fontSize: "clamp(36px, 5vw, 56px)",
+                            fontWeight: 300,
+                            color: "white",
+                            marginBottom: "32px",
+                            lineHeight: 1.2
+                        }}
+                        className="font-display"
+                    >
                         Not Sure What You Need?
                     </h2>
-                    <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+                    <p style={{
+                        fontSize: "18px",
+                        color: "rgba(255,255,255,0.75)",
+                        maxWidth: "600px",
+                        margin: "0 auto 48px",
+                        lineHeight: 1.7
+                    }}>
                         Our experts can help you assess your space and recommend the best
                         services for your needs.
                     </p>
                     <Link
                         href="/contact"
-                        className="btn btn-white btn-lg inline-flex group"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "12px",
+                            padding: "22px 44px",
+                            backgroundColor: "white",
+                            color: "var(--text-primary)",
+                            borderRadius: "9999px",
+                            fontWeight: 600,
+                            fontSize: "16px",
+                            textDecoration: "none",
+                            boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
+                            transition: "all 0.2s ease"
+                        }}
                     >
                         Get Free Consultation
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight style={{ width: "20px", height: "20px" }} />
                     </Link>
                 </div>
             </section>

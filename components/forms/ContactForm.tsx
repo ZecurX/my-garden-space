@@ -43,11 +43,11 @@ export default function ContactForm() {
 
     if (isSuccess) {
         return (
-            <div className="bg-[var(--primary-50)] rounded-2xl p-8 text-center">
-                <div className="w-16 h-16 bg-[var(--primary-100)] rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[var(--primary-50)] rounded-2xl p-10 text-center border border-[var(--primary-100)]">
+                <div className="w-16 h-16 bg-[var(--primary-100)] rounded-full flex items-center justify-center mx-auto mb-5">
                     <CheckCircle className="w-8 h-8 text-[var(--primary-600)]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
+                <h3 className="text-xl font-display font-medium text-[var(--text-primary)] mb-2">
                     Message Sent!
                 </h3>
                 <p className="text-[var(--text-secondary)]">
@@ -59,15 +59,15 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="form-group">
                 <label htmlFor="name" className="form-label">
-                    Full Name *
+                    Full Name
                 </label>
                 <input
                     type="text"
                     id="name"
-                    className={`form-input ${errors.name ? "border-red-500" : ""}`}
+                    className={`form-input ${errors.name ? "border-red-500 focus:border-red-500" : ""}`}
                     placeholder="Your name"
                     {...register("name")}
                 />
@@ -76,15 +76,15 @@ export default function ContactForm() {
                 )}
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 gap-6">
                 <div className="form-group">
                     <label htmlFor="email" className="form-label">
-                        Email Address *
+                        Email Address
                     </label>
                     <input
                         type="email"
                         id="email"
-                        className={`form-input ${errors.email ? "border-red-500" : ""}`}
+                        className={`form-input ${errors.email ? "border-red-500 focus:border-red-500" : ""}`}
                         placeholder="your@email.com"
                         {...register("email")}
                     />
@@ -95,12 +95,12 @@ export default function ContactForm() {
 
                 <div className="form-group">
                     <label htmlFor="phone" className="form-label">
-                        Phone Number *
+                        Phone Number
                     </label>
                     <input
                         type="tel"
                         id="phone"
-                        className={`form-input ${errors.phone ? "border-red-500" : ""}`}
+                        className={`form-input ${errors.phone ? "border-red-500 focus:border-red-500" : ""}`}
                         placeholder="9876543210"
                         {...register("phone")}
                     />
@@ -112,12 +112,12 @@ export default function ContactForm() {
 
             <div className="form-group">
                 <label htmlFor="message" className="form-label">
-                    Message *
+                    Message
                 </label>
                 <textarea
                     id="message"
                     rows={5}
-                    className={`form-input form-textarea ${errors.message ? "border-red-500" : ""
+                    className={`form-input form-textarea ${errors.message ? "border-red-500 focus:border-red-500" : ""
                         }`}
                     placeholder="Tell us about your project or inquiry..."
                     {...register("message")}

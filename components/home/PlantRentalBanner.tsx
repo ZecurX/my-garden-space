@@ -39,45 +39,82 @@ const useCases = [
 
 export default function PlantRentalBanner() {
     return (
-        <section className="relative py-20 lg:py-28 overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-800)] via-[var(--primary-900)] to-[#0c3d22]" />
-
-            {/* Decorative Elements */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-10 left-10 w-40 h-40 border border-white rounded-full" />
-                <div className="absolute bottom-10 right-20 w-60 h-60 border border-white rounded-full" />
-                <div className="absolute top-1/2 left-1/4 w-20 h-20 border border-white rounded-full" />
-            </div>
-
-            <div className="relative container mx-auto px-4 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section style={{
+            position: "relative",
+            padding: "160px 0",
+            overflow: "hidden",
+            backgroundColor: "var(--primary-950)"
+        }}>
+            <div style={{
+                maxWidth: "1400px",
+                margin: "0 auto",
+                padding: "0 40px"
+            }}>
+                <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr",
+                    gap: "80px",
+                    alignItems: "center"
+                }} className="lg:!grid-cols-2">
                     {/* Content */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6">
-                            <Flower2 className="w-4 h-4 text-[var(--primary-300)]" />
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-400)",
+                            marginBottom: "32px"
+                        }}>
                             Special Service
                         </span>
 
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                        <h2
+                            style={{
+                                fontSize: "clamp(36px, 5vw, 60px)",
+                                fontWeight: 300,
+                                color: "white",
+                                marginBottom: "40px",
+                                lineHeight: 1.1
+                            }}
+                            className="font-display"
+                        >
                             Rent Plants for
                             <br />
-                            <span className="text-[var(--primary-300)]">Any Occasion</span>
+                            <span style={{
+                                color: "var(--primary-400)",
+                                fontStyle: "italic",
+                                fontWeight: 400
+                            }}>
+                                Any Occasion
+                            </span>
                         </h2>
 
-                        <p className="text-lg text-white/70 mb-8 max-w-xl">
+                        <p style={{
+                            fontSize: "18px",
+                            color: "rgba(255,255,255,0.85)",
+                            marginBottom: "56px",
+                            maxWidth: "550px",
+                            lineHeight: 1.7
+                        }}>
                             Add natural beauty to your events, offices, and homes with our
                             premium plant rental service. Transform any space instantly
                             without the long-term commitment.
                         </p>
 
                         {/* Benefits Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(2, 1fr)",
+                            gap: "40px",
+                            marginBottom: "56px"
+                        }}>
                             {benefits.map((benefit, index) => {
                                 const Icon = benefit.icon;
                                 return (
@@ -86,17 +123,43 @@ export default function PlantRentalBanner() {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="flex items-start gap-3"
+                                        transition={{ delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "flex-start",
+                                            gap: "20px"
+                                        }}
                                     >
-                                        <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                                            <Icon className="w-5 h-5 text-[var(--primary-300)]" />
+                                        <div style={{
+                                            width: "56px",
+                                            height: "56px",
+                                            borderRadius: "16px",
+                                            backgroundColor: "rgba(255,255,255,0.1)",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            flexShrink: 0
+                                        }}>
+                                            <Icon style={{
+                                                width: "26px",
+                                                height: "26px",
+                                                color: "var(--primary-400)"
+                                            }} />
                                         </div>
                                         <div>
-                                            <h4 className="font-medium text-white mb-1">
+                                            <h4 style={{
+                                                fontWeight: 600,
+                                                color: "white",
+                                                fontSize: "18px",
+                                                marginBottom: "8px"
+                                            }}>
                                                 {benefit.title}
                                             </h4>
-                                            <p className="text-sm text-white/60">
+                                            <p style={{
+                                                fontSize: "15px",
+                                                color: "rgba(255,255,255,0.7)",
+                                                lineHeight: 1.6
+                                            }}>
                                                 {benefit.description}
                                             </p>
                                         </div>
@@ -106,11 +169,23 @@ export default function PlantRentalBanner() {
                         </div>
 
                         {/* Use Cases */}
-                        <div className="flex flex-wrap gap-2 mb-8">
+                        <div style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: "16px",
+                            marginBottom: "56px"
+                        }}>
                             {useCases.map((useCase, index) => (
                                 <span
                                     key={index}
-                                    className="px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-sm"
+                                    style={{
+                                        padding: "14px 24px",
+                                        borderRadius: "9999px",
+                                        backgroundColor: "rgba(255,255,255,0.1)",
+                                        color: "white",
+                                        fontSize: "14px",
+                                        fontWeight: 500
+                                    }}
                                 >
                                     {useCase}
                                 </span>
@@ -120,65 +195,109 @@ export default function PlantRentalBanner() {
                         {/* CTA */}
                         <Link
                             href="/plant-rental"
-                            className="btn btn-white btn-lg inline-flex group"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                padding: "22px 44px",
+                                backgroundColor: "white",
+                                color: "var(--text-primary)",
+                                borderRadius: "9999px",
+                                fontWeight: 600,
+                                fontSize: "16px",
+                                textDecoration: "none",
+                                boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
+                                transition: "all 0.2s ease"
+                            }}
                         >
                             Explore Plant Rental
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight style={{ width: "20px", height: "20px" }} />
                         </Link>
                     </motion.div>
 
                     {/* Images */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative"
+                        transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <div className="grid grid-cols-2 gap-4">
+                        <div style={{
+                            display: "grid",
+                            gridTemplateColumns: "1fr 1fr",
+                            gap: "24px"
+                        }}>
                             {/* Main Image */}
-                            <div className="col-span-2 relative h-64 rounded-2xl overflow-hidden">
+                            <div style={{
+                                gridColumn: "span 2",
+                                position: "relative",
+                                height: "420px",
+                                borderRadius: "32px",
+                                overflow: "hidden"
+                            }}>
                                 <Image
                                     src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                                     alt="Indoor plants display"
                                     fill
-                                    className="object-cover"
+                                    style={{ objectFit: "cover" }}
                                 />
                             </div>
                             {/* Side Images */}
-                            <div className="relative h-40 rounded-2xl overflow-hidden">
+                            <div style={{
+                                position: "relative",
+                                height: "240px",
+                                borderRadius: "32px",
+                                overflow: "hidden"
+                            }}>
                                 <Image
                                     src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                     alt="Event plant decoration"
                                     fill
-                                    className="object-cover"
+                                    style={{ objectFit: "cover" }}
                                 />
                             </div>
-                            <div className="relative h-40 rounded-2xl overflow-hidden">
+                            <div style={{
+                                position: "relative",
+                                height: "240px",
+                                borderRadius: "32px",
+                                overflow: "hidden"
+                            }}>
                                 <Image
                                     src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                     alt="Office plant setup"
                                     fill
-                                    className="object-cover"
+                                    style={{ objectFit: "cover" }}
                                 />
+                                {/* Price Badge */}
+                                <div style={{
+                                    position: "absolute",
+                                    bottom: "24px",
+                                    right: "24px",
+                                    backgroundColor: "white",
+                                    borderRadius: "20px",
+                                    boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
+                                    padding: "20px 28px",
+                                    textAlign: "center"
+                                }}>
+                                    <div
+                                        style={{
+                                            fontSize: "32px",
+                                            fontWeight: 500,
+                                            color: "var(--primary-700)"
+                                        }}
+                                        className="font-display"
+                                    >
+                                        ₹99
+                                    </div>
+                                    <div style={{
+                                        fontSize: "13px",
+                                        color: "var(--text-muted)"
+                                    }}>
+                                        Starting/day
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        {/* Floating Badge */}
-                        <motion.div
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.5, type: "spring" }}
-                            className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4"
-                        >
-                            <div className="text-3xl font-bold text-[var(--primary-600)]">
-                                ₹99
-                            </div>
-                            <div className="text-sm text-[var(--text-secondary)]">
-                                Starting<br />per day
-                            </div>
-                        </motion.div>
                     </motion.div>
                 </div>
             </div>

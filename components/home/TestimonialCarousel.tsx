@@ -72,7 +72,7 @@ export default function TestimonialCarousel() {
     }, [isAutoPlaying, nextSlide]);
 
     return (
-        <section className="section-padding bg-[var(--bg-secondary)]">
+        <section className="section-padding bg-[var(--bg-cream)]">
             <div className="container mx-auto">
                 <SectionHeading
                     label="Testimonials"
@@ -90,27 +90,27 @@ export default function TestimonialCarousel() {
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIndex}
-                                initial={{ opacity: 0, x: 50 }}
+                                initial={{ opacity: 0, x: 60 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -50 }}
-                                transition={{ duration: 0.4 }}
-                                className="bg-white rounded-3xl shadow-lg p-8 md:p-12"
+                                exit={{ opacity: 0, x: -60 }}
+                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                                className="bg-white rounded-3xl shadow-lg border border-[var(--neutral-100)] p-8 md:p-12"
                             >
                                 <div className="flex flex-col md:flex-row gap-8 items-center">
                                     {/* Quote Icon */}
-                                    <div className="absolute top-6 right-8 opacity-10">
-                                        <Quote className="w-20 h-20 text-[var(--primary-600)]" />
+                                    <div className="absolute top-8 right-10 opacity-[0.06]">
+                                        <Quote className="w-24 h-24 text-[var(--primary-700)]" />
                                     </div>
 
                                     {/* Client Image */}
                                     <div className="flex-shrink-0">
-                                        <div className="relative w-24 h-24 md:w-32 md:h-32">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-400)] to-[var(--primary-600)] rounded-full animate-pulse-glow" />
+                                        <div className="relative w-24 h-24 md:w-28 md:h-28">
+                                            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-400)] to-[var(--primary-600)] rounded-full scale-105 opacity-20" />
                                             <Image
                                                 src={testimonials[currentIndex].image}
                                                 alt={testimonials[currentIndex].name}
                                                 fill
-                                                className="object-cover rounded-full border-4 border-white"
+                                                className="object-cover rounded-full border-4 border-white shadow-md"
                                             />
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@ export default function TestimonialCarousel() {
                                     <div className="flex-1 text-center md:text-left">
                                         <StarRating rating={testimonials[currentIndex].rating} size="md" />
 
-                                        <p className="mt-4 text-lg text-[var(--text-secondary)] leading-relaxed italic">
+                                        <p className="mt-5 text-lg md:text-xl font-display text-[var(--text-primary)] leading-relaxed">
                                             &ldquo;{testimonials[currentIndex].quote}&rdquo;
                                         </p>
 
@@ -127,11 +127,11 @@ export default function TestimonialCarousel() {
                                             <h4 className="text-lg font-semibold text-[var(--text-primary)]">
                                                 {testimonials[currentIndex].name}
                                             </h4>
-                                            <p className="text-sm text-[var(--text-muted)]">
+                                            <p className="text-sm text-[var(--text-muted)] mt-0.5">
                                                 {testimonials[currentIndex].title} •{" "}
                                                 {testimonials[currentIndex].location}
                                             </p>
-                                            <span className="inline-block mt-2 px-3 py-1 bg-[var(--primary-50)] text-[var(--primary-700)] text-xs font-medium rounded-full">
+                                            <span className="inline-block mt-3 px-4 py-1.5 bg-[var(--primary-50)] text-[var(--primary-700)] text-xs font-medium rounded-full">
                                                 {testimonials[currentIndex].project}
                                             </span>
                                         </div>
@@ -142,10 +142,10 @@ export default function TestimonialCarousel() {
                     </div>
 
                     {/* Navigation */}
-                    <div className="flex items-center justify-center gap-4 mt-8">
+                    <div className="flex items-center justify-center gap-5 mt-10">
                         <button
                             onClick={prevSlide}
-                            className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-[var(--primary-50)] transition-colors"
+                            className="w-12 h-12 rounded-full bg-white shadow-md border border-[var(--neutral-100)] flex items-center justify-center hover:bg-[var(--neutral-50)] hover:border-[var(--neutral-200)] transition-all"
                             aria-label="Previous testimonial"
                         >
                             <ChevronLeft className="w-5 h-5 text-[var(--text-primary)]" />
@@ -157,9 +157,9 @@ export default function TestimonialCarousel() {
                                 <button
                                     key={index}
                                     onClick={() => setCurrentIndex(index)}
-                                    className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex
-                                            ? "bg-[var(--primary-600)] w-8"
-                                            : "bg-[var(--neutral-300)] hover:bg-[var(--neutral-400)]"
+                                    className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                                        ? "bg-[var(--primary-600)] w-8"
+                                        : "bg-[var(--neutral-300)] hover:bg-[var(--neutral-400)] w-2"
                                         }`}
                                     aria-label={`Go to testimonial ${index + 1}`}
                                 />
@@ -168,7 +168,7 @@ export default function TestimonialCarousel() {
 
                         <button
                             onClick={nextSlide}
-                            className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-[var(--primary-50)] transition-colors"
+                            className="w-12 h-12 rounded-full bg-white shadow-md border border-[var(--neutral-100)] flex items-center justify-center hover:bg-[var(--neutral-50)] hover:border-[var(--neutral-200)] transition-all"
                             aria-label="Next testimonial"
                         >
                             <ChevronRight className="w-5 h-5 text-[var(--text-primary)]" />

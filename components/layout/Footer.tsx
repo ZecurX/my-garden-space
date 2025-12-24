@@ -40,31 +40,60 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-[var(--primary-900)] text-white">
+        <footer style={{ backgroundColor: "var(--primary-950)" }}>
             {/* Main Footer */}
-            <div className="container mx-auto px-4 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div style={{
+                maxWidth: "1400px",
+                margin: "0 auto",
+                padding: "120px 40px"
+            }}>
+                <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(1, 1fr)",
+                    gap: "64px"
+                }} className="md:!grid-cols-2 lg:!grid-cols-4">
                     {/* Company Info */}
-                    <div className="lg:col-span-1">
-                        <Link href="/" className="flex items-center gap-2 mb-6">
-                            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                <Leaf className="w-6 h-6 text-white" />
+                    <div>
+                        <Link href="/" style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "16px",
+                            marginBottom: "40px",
+                            textDecoration: "none"
+                        }}>
+                            <div style={{
+                                width: "60px",
+                                height: "60px",
+                                backgroundColor: "rgba(255,255,255,0.1)",
+                                borderRadius: "50%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center"
+                            }}>
+                                <Leaf style={{ width: "30px", height: "30px", color: "white" }} />
                             </div>
-                            <div className="flex flex-col">
-                                <span className="text-xl font-bold font-serif text-white">
-                                    My Garden Space
-                                </span>
-                                <span className="text-xs text-white/60 -mt-1">
-                                    Transform Your Outdoor Space
-                                </span>
-                            </div>
+                            <span
+                                style={{
+                                    fontSize: "24px",
+                                    fontWeight: 500,
+                                    color: "white"
+                                }}
+                                className="font-display"
+                            >
+                                My Garden Space
+                            </span>
                         </Link>
-                        <p className="text-white/70 mb-6 text-sm leading-relaxed">
+                        <p style={{
+                            color: "rgba(255,255,255,0.75)",
+                            marginBottom: "40px",
+                            fontSize: "16px",
+                            lineHeight: 1.7
+                        }}>
                             We transform outdoor spaces into beautiful, sustainable gardens.
                             From design to maintenance, we bring your green vision to life.
                         </p>
                         {/* Social Links */}
-                        <div className="flex gap-3">
+                        <div style={{ display: "flex", gap: "16px" }}>
                             {socialLinks.map((social) => {
                                 const Icon = social.icon;
                                 return (
@@ -73,10 +102,19 @@ export default function Footer() {
                                         href={social.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[var(--primary-600)] transition-colors"
+                                        style={{
+                                            width: "52px",
+                                            height: "52px",
+                                            backgroundColor: "rgba(255,255,255,0.1)",
+                                            borderRadius: "50%",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            transition: "background 0.2s ease"
+                                        }}
                                         aria-label={social.label}
                                     >
-                                        <Icon className="w-5 h-5" />
+                                        <Icon style={{ width: "22px", height: "22px", color: "white" }} />
                                     </a>
                                 );
                             })}
@@ -85,16 +123,27 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-6 relative">
+                        <h3 style={{
+                            fontSize: "13px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.1em",
+                            color: "white",
+                            marginBottom: "40px"
+                        }}>
                             Quick Links
-                            <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-[var(--primary-500)] -mb-2"></span>
                         </h3>
-                        <ul className="space-y-3">
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                             {quickLinks.map((link) => (
-                                <li key={link.href}>
+                                <li key={link.href} style={{ marginBottom: "20px" }}>
                                     <Link
                                         href={link.href}
-                                        className="text-white/70 hover:text-white hover:pl-2 transition-all text-sm"
+                                        style={{
+                                            color: "rgba(255,255,255,0.75)",
+                                            textDecoration: "none",
+                                            fontSize: "16px",
+                                            transition: "color 0.2s ease"
+                                        }}
                                     >
                                         {link.label}
                                     </Link>
@@ -105,16 +154,27 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-6 relative">
+                        <h3 style={{
+                            fontSize: "13px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.1em",
+                            color: "white",
+                            marginBottom: "40px"
+                        }}>
                             Our Services
-                            <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-[var(--primary-500)] -mb-2"></span>
                         </h3>
-                        <ul className="space-y-3">
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                             {services.map((service) => (
-                                <li key={service.href}>
+                                <li key={service.href} style={{ marginBottom: "20px" }}>
                                     <Link
                                         href={service.href}
-                                        className="text-white/70 hover:text-white hover:pl-2 transition-all text-sm"
+                                        style={{
+                                            color: "rgba(255,255,255,0.75)",
+                                            textDecoration: "none",
+                                            fontSize: "16px",
+                                            transition: "color 0.2s ease"
+                                        }}
                                     >
                                         {service.label}
                                     </Link>
@@ -125,38 +185,90 @@ export default function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-6 relative">
+                        <h3 style={{
+                            fontSize: "13px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.1em",
+                            color: "white",
+                            marginBottom: "40px"
+                        }}>
                             Contact Us
-                            <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-[var(--primary-500)] -mb-2"></span>
                         </h3>
-                        <ul className="space-y-4">
-                            <li>
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                            <li style={{ marginBottom: "24px" }}>
                                 <a
                                     href="tel:+919880220257"
-                                    className="flex items-start gap-3 text-white/70 hover:text-white transition-colors group"
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "flex-start",
+                                        gap: "20px",
+                                        color: "rgba(255,255,255,0.75)",
+                                        textDecoration: "none"
+                                    }}
                                 >
-                                    <Phone className="w-5 h-5 mt-0.5 text-[var(--primary-400)] group-hover:text-[var(--primary-300)]" />
-                                    <span className="text-sm">+91 98802 20257</span>
+                                    <Phone style={{
+                                        width: "24px",
+                                        height: "24px",
+                                        marginTop: "2px",
+                                        color: "var(--primary-400)"
+                                    }} />
+                                    <span style={{ fontSize: "16px" }}>+91 98802 20257</span>
                                 </a>
                             </li>
-                            <li>
+                            <li style={{ marginBottom: "24px" }}>
                                 <a
                                     href="mailto:info@mygardenspace.com"
-                                    className="flex items-start gap-3 text-white/70 hover:text-white transition-colors group"
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "flex-start",
+                                        gap: "20px",
+                                        color: "rgba(255,255,255,0.75)",
+                                        textDecoration: "none"
+                                    }}
                                 >
-                                    <Mail className="w-5 h-5 mt-0.5 text-[var(--primary-400)] group-hover:text-[var(--primary-300)]" />
-                                    <span className="text-sm">info@mygardenspace.com</span>
+                                    <Mail style={{
+                                        width: "24px",
+                                        height: "24px",
+                                        marginTop: "2px",
+                                        color: "var(--primary-400)"
+                                    }} />
+                                    <span style={{ fontSize: "16px" }}>info@mygardenspace.com</span>
                                 </a>
                             </li>
-                            <li className="flex items-start gap-3 text-white/70">
-                                <MapPin className="w-5 h-5 mt-0.5 text-[var(--primary-400)] flex-shrink-0" />
-                                <span className="text-sm">
+                            <li style={{
+                                marginBottom: "24px",
+                                display: "flex",
+                                alignItems: "flex-start",
+                                gap: "20px",
+                                color: "rgba(255,255,255,0.75)"
+                            }}>
+                                <MapPin style={{
+                                    width: "24px",
+                                    height: "24px",
+                                    marginTop: "2px",
+                                    color: "var(--primary-400)",
+                                    flexShrink: 0
+                                }} />
+                                <span style={{ fontSize: "16px" }}>
                                     Bangalore, Karnataka, India
                                 </span>
                             </li>
-                            <li className="flex items-start gap-3 text-white/70">
-                                <Clock className="w-5 h-5 mt-0.5 text-[var(--primary-400)] flex-shrink-0" />
-                                <span className="text-sm">
+                            <li style={{
+                                marginBottom: "24px",
+                                display: "flex",
+                                alignItems: "flex-start",
+                                gap: "20px",
+                                color: "rgba(255,255,255,0.75)"
+                            }}>
+                                <Clock style={{
+                                    width: "24px",
+                                    height: "24px",
+                                    marginTop: "2px",
+                                    color: "var(--primary-400)",
+                                    flexShrink: 0
+                                }} />
+                                <span style={{ fontSize: "16px" }}>
                                     Mon - Sat: 9:00 AM - 6:00 PM
                                 </span>
                             </li>
@@ -167,10 +279,23 @@ export default function Footer() {
                             href="https://wa.me/919880220257?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 mt-6 px-5 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors"
+                            style={{
+                                display: "inline-flex",
+                                alignItems: "center",
+                                gap: "12px",
+                                marginTop: "20px",
+                                padding: "18px 32px",
+                                backgroundColor: "#22c55e",
+                                borderRadius: "9999px",
+                                fontWeight: 600,
+                                fontSize: "15px",
+                                color: "white",
+                                textDecoration: "none",
+                                transition: "background 0.2s ease"
+                            }}
                         >
                             <svg
-                                className="w-5 h-5"
+                                style={{ width: "22px", height: "22px" }}
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                             >
@@ -183,21 +308,42 @@ export default function Footer() {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-white/10">
-                <div className="container mx-auto px-4 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-white/60 text-sm text-center md:text-left">
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+                <div style={{
+                    maxWidth: "1400px",
+                    margin: "0 auto",
+                    padding: "40px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "24px"
+                }} className="md:!flex-row">
+                    <p style={{
+                        color: "rgba(255,255,255,0.6)",
+                        fontSize: "15px",
+                        textAlign: "center"
+                    }}>
                         © {currentYear} My Garden Space. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-6">
+                    <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
                         <Link
                             href="/privacy-policy"
-                            className="text-white/60 hover:text-white text-sm transition-colors"
+                            style={{
+                                color: "rgba(255,255,255,0.6)",
+                                textDecoration: "none",
+                                fontSize: "15px"
+                            }}
                         >
                             Privacy Policy
                         </Link>
                         <Link
                             href="/terms"
-                            className="text-white/60 hover:text-white text-sm transition-colors"
+                            style={{
+                                color: "rgba(255,255,255,0.6)",
+                                textDecoration: "none",
+                                fontSize: "15px"
+                            }}
                         >
                             Terms of Service
                         </Link>
