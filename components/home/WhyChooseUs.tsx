@@ -58,19 +58,62 @@ const itemVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+        transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as any },
     },
 };
 
 export default function WhyChooseUs() {
     return (
-        <section className="section-padding bg-white">
-            <div className="container mx-auto">
-                <SectionHeading
-                    label="Why My Garden Space"
-                    title="Why Choose Us"
-                    subtitle="We're committed to transforming your outdoor spaces with expertise, quality, and care."
-                />
+        <section
+            style={{
+                padding: "140px 0",
+                backgroundColor: "white"
+            }}
+        >
+            <div style={{
+                maxWidth: "1400px",
+                margin: "0 auto",
+                padding: "0 40px"
+            }}>
+                {/* Section Header */}
+                <div style={{
+                    textAlign: "center",
+                    maxWidth: "800px",
+                    margin: "0 auto 80px"
+                }}>
+                    <span style={{
+                        display: "inline-block",
+                        fontSize: "12px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.15em",
+                        color: "var(--primary-600)",
+                        marginBottom: "24px"
+                    }}>
+                        Why My Garden Space
+                    </span>
+                    <h2
+                        style={{
+                            fontSize: "clamp(36px, 5vw, 56px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "32px",
+                            lineHeight: 1.2
+                        }}
+                    >
+                        Why Choose Us
+                    </h2>
+                    <p style={{
+                        fontSize: "18px",
+                        color: "var(--text-secondary)",
+                        lineHeight: 1.7,
+                        maxWidth: "600px",
+                        margin: "0 auto"
+                    }}>
+                        We&apos;re committed to transforming your outdoor spaces with expertise, quality,
+                        and care.
+                    </p>
+                </div>
 
                 <motion.div
                     variants={containerVariants}

@@ -136,9 +136,10 @@ export default function ServiceHighlights() {
                                 <Link
                                     href={`/services/${service.slug}`}
                                     style={{
-                                        display: "block",
+                                        display: "flex",
+                                        flexDirection: "column",
                                         padding: "40px",
-                                        minHeight: "280px",
+                                        height: "420px", // Fixed height for uniformity
                                         backgroundColor: "white",
                                         borderRadius: "24px",
                                         border: "1px solid var(--neutral-100)",

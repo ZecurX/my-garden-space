@@ -32,6 +32,7 @@ export function SectionHeading({
                 align === "center" && "mx-auto",
                 className
             )}
+            style={align === "center" ? { textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" } : undefined}
             {...props}
         >
             {label && (
@@ -42,6 +43,7 @@ export function SectionHeading({
                             ? "text-white/60"
                             : "text-[var(--primary-600)]"
                     )}
+                    style={align === "center" ? { textAlign: "center" } : undefined}
                 >
                     {label}
                 </span>
@@ -51,6 +53,7 @@ export function SectionHeading({
                     "text-3xl md:text-4xl font-bold mb-5",
                     dark ? "text-white" : "text-[var(--text-primary)]"
                 )}
+                style={align === "center" ? { textAlign: "center" } : undefined}
             >
                 {title}
             </h2>
@@ -58,9 +61,10 @@ export function SectionHeading({
                 <p
                     className={cn(
                         "text-lg leading-relaxed max-w-2xl",
-                        align === "center" && "mx-auto",
+                        align === "center" && "mx-auto text-center",
                         dark ? "text-white/65" : "text-[var(--text-secondary)]"
                     )}
+                    style={align === "center" ? { textAlign: "center" } : undefined}
                 >
                     {subtitle}
                 </p>

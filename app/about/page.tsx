@@ -64,42 +64,80 @@ const services = [
 export default function AboutPage() {
     return (
         <>
-            {/* Hero Section */}
-            <section className="relative pt-40 pb-24 bg-[var(--bg-cream)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-6">
+            {/* Hero & Stats Merged Section */}
+            <section style={{ padding: "180px 0 100px", backgroundColor: "var(--bg-cream)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
+
+                    {/* Hero Content */}
+                    <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "24px"
+                        }}>
                             About My Garden Space
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
+                        <h1 style={{
+                            fontSize: "clamp(40px, 5vw, 64px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "32px",
+                            lineHeight: 1.1
+                        }}>
                             Transforming Spaces,
                             <br />
-                            <span className="text-[var(--primary-600)]">Creating Dreams</span>
+                            <span style={{ color: "var(--primary-600)" }}>Creating Dreams</span>
                         </h1>
-                        <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto">
+                        <p style={{
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.7,
+                            maxWidth: "600px",
+                            margin: "0 auto 60px"
+                        }}>
                             We are passionate about bringing nature closer to you. With over a
                             decade of experience, we transform outdoor spaces into beautiful,
                             sustainable gardens that enhance your quality of life.
                         </p>
                     </div>
-                </div>
-            </section>
 
-            {/* Stats */}
-            <section className="py-16 bg-white border-b border-[var(--neutral-100)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                    {/* Stats Grid */}
+                    <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                        gap: "40px",
+                        marginTop: "80px",
+                        textAlign: "center",
+                        borderTop: "1px solid rgba(0,0,0,0.05)",
+                        paddingTop: "60px"
+                    }}>
                         {stats.map((stat, index) => (
-                            <div key={index} className="text-center">
-                                <div className="text-4xl lg:text-5xl font-bold text-[var(--primary-700)] mb-2">
+                            <div key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                <div style={{
+                                    fontSize: "clamp(36px, 4vw, 48px)",
+                                    fontWeight: 700,
+                                    color: "var(--primary-700)",
+                                    marginBottom: "8px"
+                                }}>
                                     {stat.value}
                                 </div>
-                                <div className="text-sm text-[var(--text-muted)] font-medium tracking-wide">
+                                <div style={{
+                                    fontSize: "14px",
+                                    fontWeight: 500,
+                                    color: "var(--text-muted)",
+                                    textTransform: "uppercase",
+                                    letterSpacing: "0.05em"
+                                }}>
                                     {stat.label}
                                 </div>
                             </div>
                         ))}
                     </div>
+
                 </div>
             </section>
 
@@ -117,8 +155,8 @@ export default function AboutPage() {
                                 />
                             </div>
                             {/* Floating card */}
-                            <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[180px]">
-                                <div className="flex items-center gap-3 mb-2">
+                            <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[180px] text-center">
+                                <div className="flex items-center justify-center gap-3 mb-2">
                                     <Award className="w-8 h-8 text-[var(--primary-600)]" />
                                     <div className="text-3xl font-bold text-[var(--primary-700)]">
                                         10+
@@ -137,6 +175,7 @@ export default function AboutPage() {
                                 align="left"
                             />
                             <div className="space-y-5 text-[var(--text-secondary)] leading-relaxed">
+                                <br />
                                 <p>
                                     Founded in 2014, My Garden Space began with a simple vision:
                                     to bring the beauty of nature into every home and business.
@@ -156,6 +195,7 @@ export default function AboutPage() {
                                     expertise and creativity to every project.
                                 </p>
                             </div>
+                            <br />
 
                             {/* Services List */}
                             <div className="mt-10 grid grid-cols-2 gap-4">
@@ -174,29 +214,87 @@ export default function AboutPage() {
             </section>
 
             {/* Our Values */}
-            <section className="section-padding bg-[var(--bg-cream)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <SectionHeading
-                        label="Our Values"
-                        title="What We Stand For"
-                        subtitle="The principles that guide everything we do at My Garden Space."
-                    />
+            <section style={{ padding: "120px 0", backgroundColor: "var(--bg-cream)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Centered Heading */}
+                    <div style={{ maxWidth: "800px", margin: "0 auto 80px", textAlign: "center" }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "24px"
+                        }}>
+                            Our Values
+                        </span>
+                        <h2 style={{
+                            fontSize: "clamp(32px, 4vw, 48px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "16px"
+                        }}>
+                            What We Stand For
+                        </h2>
+                        <p style={{
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.6
+                        }}>
+                            The principles that guide everything we do at My Garden Space.
+                        </p>
+                    </div>
+
+                    <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                        gap: "32px"
+                    }}>
                         {values.map((value, index) => {
                             const Icon = value.icon;
                             return (
                                 <div
                                     key={index}
-                                    className="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 border border-[var(--neutral-100)]"
+                                    style={{
+                                        backgroundColor: "white",
+                                        borderRadius: "24px",
+                                        padding: "40px",
+                                        textAlign: "center",
+                                        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+                                        border: "1px solid var(--neutral-100)",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        height: "100%", // Uniform height
+                                    }}
                                 >
-                                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--neutral-50)] mb-6">
-                                        <Icon className="w-7 h-7 text-[var(--primary-600)]" />
+                                    <div style={{
+                                        width: "60px",
+                                        height: "60px",
+                                        borderRadius: "20px",
+                                        backgroundColor: "var(--neutral-50)",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        marginBottom: "24px"
+                                    }}>
+                                        <Icon style={{ width: "28px", height: "28px", color: "var(--primary-600)" }} />
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-3 text-[var(--text-primary)]">
+                                    <h3 style={{
+                                        fontSize: "20px",
+                                        fontWeight: 600,
+                                        color: "var(--text-primary)",
+                                        marginBottom: "16px"
+                                    }}>
                                         {value.title}
                                     </h3>
-                                    <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
+                                    <p style={{
+                                        color: "var(--text-secondary)",
+                                        fontSize: "15px",
+                                        lineHeight: 1.6
+                                    }}>
                                         {value.description}
                                     </p>
                                 </div>
@@ -207,25 +305,45 @@ export default function AboutPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="section-padding bg-[var(--primary-950)]">
-                <div className="container mx-auto px-6 lg:px-12 text-center">
-                    <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-400)] mb-5">
-                        Let&apos;s Work Together
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                        Ready to Transform Your Space?
-                    </h2>
-                    <p className="text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Let&apos;s discuss your project and create the garden of your
-                        dreams together.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="btn btn-white btn-lg inline-flex group"
-                    >
-                        Get in Touch
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+            <section style={{ padding: "100px 0", backgroundColor: "var(--primary-950)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+                    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-400)",
+                            marginBottom: "20px"
+                        }}>
+                            Let&apos;s Work Together
+                        </span>
+                        <h2 style={{
+                            fontSize: "clamp(32px, 4vw, 48px)",
+                            fontWeight: 700,
+                            color: "white",
+                            marginBottom: "24px"
+                        }}>
+                            Ready to Transform Your Space?
+                        </h2>
+                        <p style={{
+                            fontSize: "18px",
+                            color: "rgba(255,255,255,0.7)",
+                            lineHeight: 1.6,
+                            marginBottom: "40px"
+                        }}>
+                            Let&apos;s discuss your project and create the garden of your
+                            dreams together.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="btn btn-white btn-lg inline-flex group"
+                        >
+                            Get in Touch
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
                 </div>
             </section>
         </>

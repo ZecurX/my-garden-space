@@ -110,88 +110,103 @@ export default function PlantRentalPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-40 pb-24 bg-gradient-to-b from-[var(--primary-800)] to-[var(--primary-900)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="text-center lg:text-left">
-                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-8">
-                                <Flower2 className="w-4 h-4 text-[var(--primary-300)]" />
-                                Plant Rental Service
-                            </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                                Rent Plants for
-                                <br />
-                                <span className="text-[var(--primary-300)]">Any Occasion</span>
-                            </h1>
-                            <p className="text-lg text-white/80 mb-10 max-w-lg">
-                                Transform any space with beautiful plants. No long-term
-                                commitment, no hassle. We handle everything from delivery to
-                                maintenance.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <Link href="#inquiry-form" className="btn btn-white btn-lg">
-                                    Request Plants
-                                    <ArrowRight className="w-5 h-5" />
-                                </Link>
-                                <a href="tel:+919880220257" className="btn btn-lg !border-white !text-white hover:!bg-white/10 bg-transparent border-2">
-                                    Call to Discuss
-                                </a>
-                            </div>
-                        </div>
-                        <div className="relative hidden lg:block">
-                            <div className="relative h-[400px] rounded-3xl overflow-hidden">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Plant rental display"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4">
-                                <div className="text-3xl font-bold text-[var(--primary-600)]">
-                                    ₹99
-                                </div>
-                                <div className="text-sm text-[var(--text-secondary)]">
-                                    Starting per day
-                                </div>
-                            </div>
+            {/* Hero Section */}
+            <section style={{ padding: "160px 0 100px", backgroundColor: "var(--primary-900)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+
+                    {/* Centered Content */}
+                    <div style={{ maxWidth: "900px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <span style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "8px",
+                            padding: "8px 16px",
+                            borderRadius: "99px",
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                            color: "rgba(255,255,255,0.9)",
+                            fontSize: "14px",
+                            fontWeight: 500,
+                            marginBottom: "32px"
+                        }}>
+                            <Flower2 className="w-4 h-4 text-[var(--primary-300)]" />
+                            Plant Rental Service
+                        </span>
+
+                        <h1 style={{
+                            fontSize: "clamp(40px, 5vw, 72px)",
+                            fontWeight: 700,
+                            color: "white",
+                            marginBottom: "32px",
+                            lineHeight: 1.1
+                        }}>
+                            Rent Plants for
+                            <br />
+                            <span style={{ color: "var(--primary-300)" }}>Any Occasion</span>
+                        </h1>
+
+                        <p style={{
+                            fontSize: "19px",
+                            color: "rgba(255,255,255,0.8)",
+                            marginBottom: "48px",
+                            maxWidth: "600px",
+                            lineHeight: 1.6
+                        }}>
+                            Transform any space with beautiful plants. No long-term
+                            commitment, no hassle. We handle everything from delivery to
+                            maintenance.
+                        </p>
+
+                        <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+                            <Link href="#inquiry-form" className="btn btn-white btn-lg">
+                                Request Plants
+                                <ArrowRight className="w-5 h-5" />
+                            </Link>
+                            <a href="tel:+919880220257" className="btn btn-lg !border-white !text-white hover:!bg-white/10 bg-transparent border-2">
+                                Call to Discuss
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Use Cases */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <SectionHeading
-                        label="Use Cases"
-                        title="Perfect for Every Occasion"
-                        subtitle="From weddings to workspaces, our plants add life to any environment."
-                    />
+            <section style={{ padding: "100px 0", backgroundColor: "white" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
+                    <div style={{ textAlign: "center", marginBottom: "60px", maxWidth: "800px", margin: "0 auto 60px" }}>
+                        <SectionHeading
+                            label="Use Cases"
+                            title="Perfect for Every Occasion"
+                            subtitle="From weddings to workspaces, our plants add life to any environment."
+                            align="center"
+                        />
+                    </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
                         {useCases.map((useCase, index) => {
                             const Icon = useCase.icon;
                             return (
                                 <div
                                     key={index}
-                                    className="group relative rounded-2xl overflow-hidden h-[300px]"
+                                    className="group relative rounded-2xl overflow-hidden h-[400px]"
+                                    style={{ borderRadius: "24px", boxShadow: "0 10px 40px -10px rgba(0,0,0,0.15)" }}
                                 >
                                     <Image
                                         src={useCase.image}
                                         alt={useCase.title}
                                         fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                                        <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">
-                                            <Icon className="w-6 h-6 text-white" />
+                                    {/* Gradient Overlay - darker for better text contrast */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 flex flex-col items-center text-center">
+                                        <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-5 border border-white/20">
+                                            <Icon className="w-7 h-7 text-white" />
                                         </div>
-                                        <h3 className="text-xl font-semibold text-white mb-2">
+                                        <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
                                             {useCase.title}
                                         </h3>
-                                        <p className="text-white/70 text-sm">
+                                        <p className="text-white/80 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 transform translate-y-4 group-hover:translate-y-0">
                                             {useCase.description}
                                         </p>
                                     </div>
@@ -203,34 +218,44 @@ export default function PlantRentalPage() {
             </section>
 
             {/* Plant Categories */}
-            <section className="py-24 bg-[var(--bg-secondary)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <SectionHeading
-                        label="What We Offer"
-                        title="Rental Categories"
-                        subtitle="Choose from our wide selection of plants for any setting."
-                    />
+            <section style={{ padding: "100px 0", backgroundColor: "var(--bg-secondary)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
+                    <div style={{ textAlign: "center", marginBottom: "60px", maxWidth: "800px", margin: "0 auto 60px" }}>
+                        <SectionHeading
+                            label="What We Offer"
+                            title="Rental Categories"
+                            subtitle="Choose from our wide selection of plants for any setting."
+                            align="center"
+                        />
+                    </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
                         {plantCategories.map((category, index) => (
                             <div
                                 key={index}
-                                className="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                                style={{
+                                    backgroundColor: "white",
+                                    borderRadius: "24px",
+                                    padding: "32px",
+                                    transition: "all 0.3s ease",
+                                    border: "1px solid rgba(0,0,0,0.05)"
+                                }}
+                                className="hover:shadow-xl"
                             >
                                 <h3 className="text-xl font-semibold mb-2 text-[var(--text-primary)]">
                                     {category.title}
                                 </h3>
-                                <p className="text-[var(--text-secondary)] text-sm mb-4">
+                                <p className="text-[var(--text-secondary)] text-sm mb-4 leading-relaxed">
                                     {category.description}
                                 </p>
-                                <p className="text-xs text-[var(--text-muted)] mb-4">
+                                <p className="text-xs text-[var(--text-muted)] mb-6 bg-[var(--neutral-50)] p-3 rounded-lg">
                                     <strong>Examples:</strong> {category.examples}
                                 </p>
-                                <div className="pt-4 border-t border-[var(--neutral-200)]">
+                                <div className="pt-4 border-t border-[var(--neutral-100)] flex items-baseline gap-1">
                                     <span className="text-2xl font-bold text-[var(--primary-600)]">
                                         ₹{category.priceFrom}
                                     </span>
-                                    <span className="text-[var(--text-muted)]">/day</span>
+                                    <span className="text-[var(--text-muted)] text-sm">/day</span>
                                 </div>
                             </div>
                         ))}
@@ -239,26 +264,55 @@ export default function PlantRentalPage() {
             </section>
 
             {/* What's Included */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <SectionHeading
-                        label="All Inclusive"
-                        title="What's Included"
-                        subtitle="Our rental service covers everything you need for a hassle-free experience."
-                    />
+            <section style={{ padding: "100px 0", backgroundColor: "white" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
+                    <div style={{ textAlign: "center", marginBottom: "60px", maxWidth: "800px", margin: "0 auto 60px" }}>
+                        <span style={{
+                            display: "block",
+                            textAlign: "center",
+                            fontSize: "14px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.1em",
+                            color: "var(--primary-600)",
+                            marginBottom: "16px"
+                        }}>
+                            All Inclusive
+                        </span>
+                        <h2 style={{
+                            display: "block",
+                            textAlign: "center",
+                            fontSize: "clamp(32px, 4vw, 48px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "16px"
+                        }}>
+                            What's Included
+                        </h2>
+                        <p style={{
+                            display: "block",
+                            textAlign: "center",
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.6,
+                            margin: "0 auto"
+                        }}>
+                            Our rental service covers everything you need for a hassle-free experience.
+                        </p>
+                    </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "32px" }}>
                         {included.map((item, index) => {
                             const Icon = item.icon;
                             return (
-                                <div key={index} className="text-center">
-                                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--primary-100)] mb-6">
-                                        <Icon className="w-8 h-8 text-[var(--primary-600)]" />
+                                <div key={index} style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-[var(--primary-50)] mb-6 text-[var(--primary-600)]">
+                                        <Icon className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-lg font-semibold mb-3 text-[var(--text-primary)]">
                                         {item.title}
                                     </h3>
-                                    <p className="text-[var(--text-secondary)]">
+                                    <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
                                         {item.description}
                                     </p>
                                 </div>
@@ -268,115 +322,140 @@ export default function PlantRentalPage() {
                 </div>
             </section>
 
-            {/* Rental Info */}
-            <section className="py-24 bg-[var(--primary-50)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
+            {/* Rental Info - Minimalist / No Cards */}
+            <section style={{ padding: "100px 0", backgroundColor: "var(--primary-50)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
+
+                    {/* How It Works - Minimalist */}
+                    <div style={{ marginBottom: "96px", textAlign: "center" }}>
+                        <div style={{ maxWidth: "768px", margin: "0 auto 64px", textAlign: "center" }}>
                             <SectionHeading
-                                label="Rental Details"
+                                label="Simple Process"
                                 title="How It Works"
-                                align="left"
+                                subtitle="Get your plants in 4 easy steps"
+                                align="center"
                             />
-                            <div className="space-y-4">
+                        </div>
+
+                        <div className="relative">
+                            {/* Subtle line */}
+                            <div className="hidden lg:block absolute top-[20px] left-0 right-0 h-[2px] bg-[var(--primary-200)] w-[85%] mx-auto z-0" style={{ opacity: 0.5 }} />
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 relative z-10">
                                 {[
                                     {
                                         step: "1",
                                         title: "Tell us your needs",
-                                        description:
-                                            "Fill out the inquiry form with your event details and plant preferences.",
+                                        description: "Fill out the inquiry form with your event details."
                                     },
                                     {
                                         step: "2",
                                         title: "Get a custom quote",
-                                        description:
-                                            "We'll recommend the best plants and provide pricing within 24 hours.",
+                                        description: "We'll recommend the best plants and pricing."
                                     },
                                     {
                                         step: "3",
                                         title: "Delivery & setup",
-                                        description:
-                                            "Our team delivers and arranges the plants at your location.",
+                                        description: "Our team delivers and arranges the plants."
                                     },
                                     {
                                         step: "4",
                                         title: "Enjoy & pickup",
-                                        description:
-                                            "Use the plants for your event. We'll pick them up afterward.",
+                                        description: "Use the plants, and we'll pick them up later."
                                     },
                                 ].map((item, index) => (
-                                    <div key={index} className="flex gap-4">
-                                        <div className="w-10 h-10 rounded-full bg-[var(--primary-600)] text-white flex items-center justify-center font-bold flex-shrink-0">
+                                    <div key={index} className="flex flex-col items-center">
+                                        {/* Minimal Circle - No shadow, flat color */}
+                                        <div className="w-10 h-10 rounded-full bg-[var(--primary-600)] text-white font-bold flex items-center justify-center mb-6 relative z-10">
                                             {item.step}
                                         </div>
-                                        <div>
-                                            <h4 className="font-semibold text-[var(--text-primary)]">
-                                                {item.title}
-                                            </h4>
-                                            <p className="text-[var(--text-secondary)] text-sm">
-                                                {item.description}
-                                            </p>
-                                        </div>
+
+                                        {/* Text directly on background */}
+                                        <h4 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+                                            {item.title}
+                                        </h4>
+                                        <p className="text-[var(--text-secondary)] text-sm leading-relaxed max-w-[200px] mx-auto">
+                                            {item.description}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
                         </div>
+                    </div>
 
-                        <div className="bg-white rounded-3xl p-10 shadow-lg">
-                            <h3 className="text-2xl font-semibold mb-8 text-[var(--text-primary)]">
-                                Rental Information
-                            </h3>
-                            <div className="space-y-5">
-                                <div className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-[var(--primary-600)] mt-0.5" />
-                                    <div>
-                                        <strong>Duration Options:</strong> Daily, Weekly, Monthly
+                    {/* Rental Information - Minimalist Grid */}
+                    <div style={{ textAlign: "center" }}>
+                        <div style={{ maxWidth: "768px", margin: "0 auto 64px", textAlign: "center" }}>
+                            <SectionHeading
+                                label="Details"
+                                title="Key Information"
+                                align="center"
+                            />
+                        </div>
+
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "48px", maxWidth: "1200px", margin: "0 auto" }}>
+                            {[
+                                {
+                                    label: "Flexible Duration",
+                                    value: "Daily, Weekly, and Monthly plans tailored to your specific timeline.",
+                                    icon: Calendar
+                                },
+                                {
+                                    label: "Minimum Order",
+                                    value: "5 plants for events, 10 for offices. Custom packages available.",
+                                    icon: Store
+                                },
+                                {
+                                    label: "Service Area",
+                                    value: "Bangalore and surrounding metro areas. Travel fees may apply for outskirts.",
+                                    icon: Truck
+                                },
+                                {
+                                    label: "Advance Notice",
+                                    value: "2-3 days for small orders. 1 week for large events to ensure availability.",
+                                    icon: CheckCircle2
+                                }
+                            ].map((info, idx) => {
+                                const Icon = info.icon;
+                                return (
+                                    <div key={idx} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+                                        {/* Simple Icon */}
+                                        <div style={{ marginBottom: "16px", color: "var(--primary-600)" }}>
+                                            <Icon className="w-10 h-10" />
+                                        </div>
+                                        <h3 style={{ fontSize: "18px", fontWeight: 700, color: "var(--text-primary)", marginBottom: "12px", textAlign: "center" }}>
+                                            {info.label}
+                                        </h3>
+                                        <p style={{ color: "var(--text-secondary)", fontSize: "14px", lineHeight: 1.6, textAlign: "center" }}>
+                                            {info.value}
+                                        </p>
                                     </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-[var(--primary-600)] mt-0.5" />
-                                    <div>
-                                        <strong>Minimum Order:</strong> 5 plants for events, 10 for
-                                        offices
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-[var(--primary-600)] mt-0.5" />
-                                    <div>
-                                        <strong>Service Area:</strong> Bangalore and surrounding
-                                        areas
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-[var(--primary-600)] mt-0.5" />
-                                    <div>
-                                        <strong>Advance Notice:</strong> 2-3 days for small orders,
-                                        1 week for large events
-                                    </div>
-                                </div>
-                            </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Inquiry Form CTA */}
-            <section id="inquiry-form" className="py-24 bg-[var(--primary-900)]">
-                <div className="container mx-auto px-6 lg:px-12 text-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
-                        Ready to Rent Plants?
-                    </h2>
-                    <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
-                        Contact us with your requirements and we&apos;ll provide a
-                        customized quote within 24 hours.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="btn btn-white btn-lg inline-flex group"
-                    >
-                        Get a Quote
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+            <section id="inquiry-form" style={{ padding: "100px 0", backgroundColor: "var(--primary-900)" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+                    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+                        <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 700, color: "white", marginBottom: "24px" }}>
+                            Ready to Rent Plants?
+                        </h2>
+                        <p style={{ fontSize: "18px", color: "rgba(255,255,255,0.8)", marginBottom: "48px", lineHeight: 1.6 }}>
+                            Contact us with your requirements and we&apos;ll provide a
+                            customized quote within 24 hours.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="btn btn-white btn-lg inline-flex group"
+                        >
+                            Get a Quote
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
                 </div>
             </section>
         </>
