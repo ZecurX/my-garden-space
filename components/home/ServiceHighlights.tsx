@@ -157,9 +157,9 @@ export default function ServiceHighlights() {
                                     href={`/services#${service.slug}`}
                                     className="relative z-10 h-full w-full p-8 sm:p-10 flex flex-col items-center justify-end text-center no-underline"
                                 >
-                                    {/* Glass Badge for Icon */}
-                                    <div className="mb-6 w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-primary-600 group-hover:border-primary-500 transition-colors duration-500">
-                                        <Icon size={28} />
+                                    {/* Clean Icon Badge */}
+                                    <div className="mb-6 w-16 h-16 flex items-center justify-center text-white group-hover:text-primary-300 group-hover:scale-110 transition-all duration-500">
+                                        <Icon size={40} strokeWidth={1.5} />
                                     </div>
 
                                     {/* Content */}
