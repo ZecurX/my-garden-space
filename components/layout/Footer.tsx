@@ -243,7 +243,7 @@ export default function Footer() {
                                     flexShrink: 0
                                 }} />
                                 <span style={{ fontSize: "16px" }}>
-                                    Bangalore, Karnataka, India
+                                    Bhoopasandra Main Rd, RMS Colony, Central Excise Layout, Sanjayanagara, Bengaluru, Karnataka 560094
                                 </span>
                             </li>
                         </ul>

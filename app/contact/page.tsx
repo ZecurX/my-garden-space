@@ -30,7 +30,7 @@ const contactInfo = [
     {
         icon: MapPin,
         title: "Location",
-        content: "Bangalore, Karnataka",
+        content: "Bhoopasandra Main Rd, RMS Colony, Central Excise Layout, Sanjayanagara, Bengaluru, Karnataka 560094",
         href: "https://share.google/Ayxa3HSA85KZ9VRp8",
         description: "Serving all areas",
     },
