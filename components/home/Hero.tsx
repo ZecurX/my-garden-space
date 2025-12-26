@@ -142,50 +142,7 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              marginTop: "100px",
-              paddingTop: "48px",
-              borderTop: "1px solid rgba(255,255,255,0.2)"
-            }}
-          >
-            <div style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "72px"
-            }}>
-              {[
-                { value: "500+", label: "Projects Completed" },
-                { value: "10+", label: "Years Experience" },
-                { value: "200+", label: "Happy Clients" },
-              ].map((stat, index) => (
-                <div key={index} style={{ textAlign: "left" }}>
-                  <div
-                    style={{
-                      fontSize: "clamp(36px, 4vw, 52px)",
-                      fontWeight: 700,
-                      color: "white",
-                      letterSpacing: "-0.02em"
-                    }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div style={{
-                    marginTop: "12px",
-                    fontSize: "15px",
-                    color: "rgba(255,255,255,0.7)",
-                    fontWeight: 500
-                  }}>
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+
         </div>
       </div>
 

@@ -20,48 +20,56 @@ const services = [
         title: "Gardening & Maintenance",
         description: "Regular care to keep your garden flourishing all year round.",
         slug: "gardening-maintenance",
+        image: "/services/maintenance.png"
     },
     {
         icon: TreePine,
         title: "Landscaping & Design",
         description: "Transform your outdoor space with professional landscape design.",
         slug: "landscaping",
+        image: "/services/landscaping.png"
     },
     {
         icon: Flower2,
         title: "Lawn Development",
         description: "Natural lawns and artificial grass solutions for every need.",
         slug: "lawn-ground",
+        image: "/services/lawn.png"
     },
     {
         icon: Fence,
         title: "Pergola & Structures",
         description: "Beautiful pergolas, gazebos, and decorative installations.",
         slug: "structural-decorative",
+        image: "/services/pergola.png"
     },
     {
         icon: Waves,
         title: "Water Features",
         description: "Elegant ponds, fountains, and water body installations.",
         slug: "water-features",
+        image: "/services/water.png"
     },
     {
         icon: FlowerIcon,
         title: "Vertical Gardens",
         description: "Space-saving vertical and artificial wall garden solutions.",
         slug: "vertical-green",
+        image: "/services/vertical.png"
     },
     {
         icon: Droplets,
         title: "Pots & Planters",
         description: "Premium FRP pots and decorative planters for any space.",
         slug: "pots-accessories",
+        image: "/services/pots.png"
     },
     {
         icon: Wrench,
         title: "Smart Irrigation",
         description: "Drip and sprinkler systems for water-efficient gardens.",
         slug: "irrigation-smart",
+        image: "/services/irrigation.png"
     },
 ];
 
@@ -118,80 +126,59 @@ export default function ServiceHighlights() {
                 </div>
 
                 {/* Services Grid */}
-                <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                    gap: "32px"
-                }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
                             <motion.div
                                 key={service.slug}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                                viewport={{ once: true, margin: "-20px" }}
+                                transition={{
+                                    delay: (index % 4) * 0.1,
+                                    duration: 0.8,
+                                    ease: [0.21, 0.47, 0.32, 0.98]
+                                }}
+                                className="group relative h-[380px] sm:h-[420px] overflow-hidden rounded-[2.5rem] bg-neutral-100 cursor-pointer shadow-sm hover:shadow-xl transition-[shadow,border-color] duration-500 will-change-transform"
                             >
+                                {/* Background Image */}
+                                <div className="absolute inset-0">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                                    />
+                                    {/* Gradients */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-opacity duration-700 group-hover:opacity-90" />
+                                </div>
+
                                 <Link
-                                    href={`/services/${service.slug}`}
-                                    style={{
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        padding: "40px",
-                                        height: "420px", // Fixed height for uniformity
-                                        backgroundColor: "white",
-                                        borderRadius: "24px",
-                                        border: "1px solid var(--neutral-100)",
-                                        textDecoration: "none",
-                                        transition: "all 0.3s ease"
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.borderColor = "var(--primary-200)";
-                                        e.currentTarget.style.boxShadow = "0 20px 60px -15px rgba(0,0,0,0.1)";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.borderColor = "var(--neutral-100)";
-                                        e.currentTarget.style.boxShadow = "none";
-                                    }}
+                                    href={`/services#${service.slug}`}
+                                    className="relative z-10 h-full w-full p-8 sm:p-10 flex flex-col items-center justify-end text-center no-underline"
                                 >
-                                    {/* Icon */}
-                                    <div style={{
-                                        width: "72px",
-                                        height: "72px",
-                                        borderRadius: "20px",
-                                        backgroundColor: "var(--primary-50)",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        marginBottom: "28px"
-                                    }}>
-                                        <Icon style={{
-                                            width: "32px",
-                                            height: "32px",
-                                            color: "var(--primary-600)"
-                                        }} />
+                                    {/* Glass Badge for Icon */}
+                                    <div className="mb-6 w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-primary-600 group-hover:border-primary-500 transition-colors duration-500">
+                                        <Icon size={28} />
                                     </div>
 
                                     {/* Content */}
-                                    <h3
-                                        style={{
-                                            fontSize: "22px",
-                                            fontWeight: 600,
-                                            color: "var(--text-primary)",
-                                            marginBottom: "16px"
-                                        }}
-                                    >
-                                        {service.title}
-                                    </h3>
-                                    <p style={{
-                                        fontSize: "16px",
-                                        color: "var(--text-secondary)",
-                                        lineHeight: 1.6
-                                    }}>
-                                        {service.description}
-                                    </p>
+                                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 [transition-timing-function:cubic-bezier(0.21,0.47,0.32,0.98)]">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 tracking-tight">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 max-w-[280px]">
+                                            {service.description}
+                                        </p>
+                                        <div className="flex items-center justify-center text-primary-400 font-semibold text-sm sm:text-base transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:text-primary-300">
+                                            <span>Learn more</span>
+                                            <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500" />
+                                        </div>
+                                    </div>
                                 </Link>
+
+                                {/* Subtle Border Glow on Hover */}
+                                <div className="absolute inset-0 border-2 border-primary-500/0 group-hover:border-primary-500/20 rounded-[2.5rem] transition-colors duration-1000" />
                             </motion.div>
                         );
                     })}

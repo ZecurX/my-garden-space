@@ -23,8 +23,8 @@ const contactInfo = [
     {
         icon: Mail,
         title: "Email",
-        content: "info@mygardenspace.com",
-        href: "mailto:info@mygardenspace.com",
+        content: "mygardenspace11@gmail.com",
+        href: "mailto:mygardenspace11@gmail.com",
         description: "We reply within 24 hours",
     },
     {
@@ -82,96 +82,97 @@ export default function ContactPage() {
 
             {/* Contact Content */}
             <section className="pt-24 pb-0 bg-white">
-                <div className="container mx-auto px-6">
-                    <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-                        {/* Contact Info Header */}
-                        <div style={{ textAlign: "center", marginBottom: "60px" }}>
-                            <h2 style={{
-                                fontSize: "32px",
-                                fontWeight: 600,
-                                color: "var(--text-primary)",
-                                marginBottom: "16px"
-                            }}>
-                                Support Channels
-                            </h2>
-                            <p style={{ color: "var(--text-secondary)", fontSize: "16px" }}>
-                                We&apos;re here to help. Choose the most convenient way to reach us.
-                            </p>
-                        </div>
+                <div className="container mx-auto px-6 max-w-7xl">
+                    {/* Contact Info Header */}
+                    <div style={{ textAlign: "center", marginBottom: "60px" }}>
+                        <h2 style={{
+                            fontSize: "32px",
+                            fontWeight: 600,
+                            color: "var(--text-primary)",
+                            marginBottom: "16px"
+                        }}>
+                            Support Channels
+                        </h2>
+                        <p style={{ color: "var(--text-secondary)", fontSize: "16px" }}>
+                            We&apos;re here to help. Choose the most convenient way to reach us.
+                        </p>
+                    </div>
 
-                        {/* Contact Info Grid */}
-                        <div style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr",
-                            gap: "24px",
-                            marginBottom: "64px"
-                        }} className="md:!grid-cols-3">
-                            {contactInfo.map((item, index) => {
-                                const Icon = item.icon;
-                                return (
-                                    <div key={index} style={{
-                                        padding: "32px",
-                                        borderRadius: "24px",
-                                        backgroundColor: "var(--neutral-50)",
-                                        border: "1px solid var(--neutral-100)",
+                    {/* Contact Info Grid */}
+                    <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr",
+                        gap: "24px",
+                        marginBottom: "64px"
+                    }} className="md:!grid-cols-3">
+                        {contactInfo.map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <div key={index} style={{
+                                    padding: "32px",
+                                    borderRadius: "24px",
+                                    backgroundColor: "var(--neutral-50)",
+                                    border: "1px solid var(--neutral-100)",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                    textAlign: "center",
+                                    transition: "all 0.3s ease"
+                                }}>
+                                    <div style={{
+                                        width: "60px",
+                                        height: "60px",
+                                        borderRadius: "18px",
+                                        backgroundColor: "white",
                                         display: "flex",
-                                        flexDirection: "column",
                                         alignItems: "center",
-                                        textAlign: "center",
-                                        transition: "all 0.3s ease"
+                                        justifyContent: "center",
+                                        marginBottom: "20px",
+                                        boxShadow: "0 10px 20px rgba(0,0,0,0.03)"
                                     }}>
-                                        <div style={{
-                                            width: "60px",
-                                            height: "60px",
-                                            borderRadius: "18px",
-                                            backgroundColor: "white",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            justifyContent: "center",
-                                            marginBottom: "20px",
-                                            boxShadow: "0 10px 20px rgba(0,0,0,0.03)"
-                                        }}>
-                                            <Icon style={{ width: "24px", height: "24px", color: "var(--primary-600)" }} />
-                                        </div>
-                                        <h3 style={{
-                                            fontSize: "18px",
-                                            fontWeight: 600,
-                                            color: "var(--text-primary)",
-                                            marginBottom: "8px"
-                                        }}>
-                                            {item.title}
-                                        </h3>
-                                        {item.href ? (
-                                            <a
-                                                href={item.href}
-                                                style={{
-                                                    color: "var(--primary-600)",
-                                                    fontWeight: 500,
-                                                    textDecoration: "none",
-                                                    fontSize: "16px",
-                                                    marginBottom: "4px"
-                                                }}
-                                            >
-                                                {item.content}
-                                            </a>
-                                        ) : (
-                                            <p style={{
-                                                color: "var(--text-primary)",
+                                        <Icon style={{ width: "24px", height: "24px", color: "var(--primary-600)" }} />
+                                    </div>
+                                    <h3 style={{
+                                        fontSize: "18px",
+                                        fontWeight: 600,
+                                        color: "var(--text-primary)",
+                                        marginBottom: "8px"
+                                    }}>
+                                        {item.title}
+                                    </h3>
+                                    {item.href ? (
+                                        <a
+                                            href={item.href}
+                                            style={{
+                                                color: "var(--primary-600)",
                                                 fontWeight: 500,
+                                                textDecoration: "none",
                                                 fontSize: "16px",
                                                 marginBottom: "4px"
-                                            }}>
-                                                {item.content}
-                                            </p>
-                                        )}
-                                        <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>
-                                            {item.description}
+                                            }}
+                                        >
+                                            {item.content}
+                                        </a>
+                                    ) : (
+                                        <p style={{
+                                            color: "var(--text-primary)",
+                                            fontWeight: 500,
+                                            fontSize: "16px",
+                                            marginBottom: "4px"
+                                        }}>
+                                            {item.content}
                                         </p>
-                                    </div>
-                                );
-                            })}
-                        </div>
+                                    )}
+                                    <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
 
+                    {/* WhatsApp & Map Grid - Side by side on Desktop */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                         {/* WhatsApp CTA */}
                         <div style={{
                             padding: "40px",
@@ -179,12 +180,16 @@ export default function ContactPage() {
                             backgroundColor: "var(--primary-950)",
                             color: "white",
                             textAlign: "center",
-                            marginBottom: "64px"
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            minHeight: "400px"
                         }}>
                             <h3 style={{ fontSize: "24px", fontWeight: 600, marginBottom: "16px" }}>
                                 Prefer a quick chat?
                             </h3>
-                            <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "32px" }}>
+                            <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "32px", maxWidth: "350px" }}>
                                 Message us on WhatsApp for instant support and fast quotes.
                             </p>
                             <a

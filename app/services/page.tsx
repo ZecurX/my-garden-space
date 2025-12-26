@@ -331,7 +331,7 @@ export default function ServicesPage() {
                                         </ul>
 
                                         <Link
-                                            href={`/services/${category.slug}`}
+                                            href="/contact"
                                             style={{
                                                 display: "inline-flex",
                                                 alignItems: "center",
@@ -346,7 +346,7 @@ export default function ServicesPage() {
                                                 transition: "background 0.2s ease"
                                             }}
                                         >
-                                            Explore Services
+                                            Contact Us
                                             <ArrowRight style={{ width: "20px", height: "20px" }} />
                                         </Link>
                                     </div>

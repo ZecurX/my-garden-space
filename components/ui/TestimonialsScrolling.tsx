@@ -72,7 +72,7 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsSlideshow() {
     return (
-        <section style={{ padding: "120px 0", backgroundColor: "var(--bg-cream)" }}>
+        <section id="testimonials" style={{ padding: "120px 0", backgroundColor: "var(--bg-cream)" }}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
 
                 {/* Section Header */}

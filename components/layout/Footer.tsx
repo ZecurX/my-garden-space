@@ -12,7 +12,7 @@ const quickLinks = [
     { label: "Services", href: "/services" },
     { label: "Plant Rental", href: "/plant-rental" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Testimonials", href: "/testimonials" },
+    { label: "Testimonials", href: "/#testimonials" },
     { label: "Contact", href: "/contact" },
 ];
 
@@ -210,7 +210,7 @@ export default function Footer() {
                             </li>
                             <li style={{ marginBottom: "24px" }}>
                                 <a
-                                    href="mailto:info@mygardenspace.com"
+                                    href="mailto:mygardenspace11@gmail.com"
                                     style={{
                                         display: "flex",
                                         alignItems: "flex-start",
@@ -225,7 +225,7 @@ export default function Footer() {
                                         marginTop: "2px",
                                         color: "var(--primary-400)"
                                     }} />
-                                    <span style={{ fontSize: "16px" }}>info@mygardenspace.com</span>
+                                    <span style={{ fontSize: "16px" }}>mygardenspace11@gmail.com</span>
                                 </a>
                             </li>
                             <li style={{

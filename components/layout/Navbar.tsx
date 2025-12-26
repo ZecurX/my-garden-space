@@ -416,6 +416,7 @@ export default function Navbar() {
                                                                     <Link
                                                                         key={category.slug}
                                                                         href={`/services#${category.slug}`}
+                                                                        onClick={() => setIsMobileMenuOpen(false)}
                                                                         style={{
                                                                             display: "block",
                                                                             padding: "16px 20px",
