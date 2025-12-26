@@ -102,10 +102,10 @@ export default function ContactPage() {
                         {/* Contact Info Grid */}
                         <div style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                            gap: "32px",
+                            gridTemplateColumns: "1fr",
+                            gap: "24px",
                             marginBottom: "64px"
-                        }}>
+                        }} className="md:!grid-cols-3">
                             {contactInfo.map((item, index) => {
                                 const Icon = item.icon;
                                 return (
