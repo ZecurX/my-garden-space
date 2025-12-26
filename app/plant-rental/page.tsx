@@ -109,47 +109,40 @@ const included = [
 export default function PlantRentalPage() {
     return (
         <>
-            {/* Hero Section */}
-            {/* Hero Section */}
-            <section style={{ padding: "160px 0 100px", backgroundColor: "var(--primary-900)" }}>
+            {/* Hero Section - Cream style like About page */}
+            <section style={{ padding: "180px 0 100px", backgroundColor: "white" }}>
                 <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
-
-                    {/* Centered Content */}
                     <div style={{ maxWidth: "900px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
                         <span style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            gap: "8px",
-                            padding: "8px 16px",
-                            borderRadius: "99px",
-                            backgroundColor: "rgba(255,255,255,0.1)",
-                            color: "rgba(255,255,255,0.9)",
-                            fontSize: "14px",
-                            fontWeight: 500,
-                            marginBottom: "32px"
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "24px"
                         }}>
-                            <Flower2 className="w-4 h-4 text-[var(--primary-300)]" />
                             Plant Rental Service
                         </span>
 
                         <h1 style={{
-                            fontSize: "clamp(40px, 5vw, 72px)",
+                            fontSize: "clamp(40px, 5vw, 64px)",
                             fontWeight: 700,
-                            color: "white",
+                            color: "var(--text-primary)",
                             marginBottom: "32px",
                             lineHeight: 1.1
                         }}>
                             Rent Plants for
                             <br />
-                            <span style={{ color: "var(--primary-300)" }}>Any Occasion</span>
+                            <span style={{ color: "var(--primary-600)" }}>Any Occasion</span>
                         </h1>
 
                         <p style={{
-                            fontSize: "19px",
-                            color: "rgba(255,255,255,0.8)",
-                            marginBottom: "48px",
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.7,
                             maxWidth: "600px",
-                            lineHeight: 1.6
+                            margin: "0 auto 48px"
                         }}>
                             Transform any space with beautiful plants. No long-term
                             commitment, no hassle. We handle everything from delivery to
@@ -157,11 +150,11 @@ export default function PlantRentalPage() {
                         </p>
 
                         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-                            <Link href="#inquiry-form" className="btn btn-white btn-lg">
+                            <Link href="#inquiry-form" className="btn btn-primary btn-lg">
                                 Request Plants
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
-                            <a href="tel:+919880220257" className="btn btn-lg !border-white !text-white hover:!bg-white/10 bg-transparent border-2">
+                            <a href="tel:+919880220257" className="btn btn-outline btn-lg">
                                 Call to Discuss
                             </a>
                         </div>
@@ -437,7 +430,7 @@ export default function PlantRentalPage() {
                 </div>
             </section>
 
-            {/* Inquiry Form CTA */}
+            {/* Inquiry Form CTA - Dark Green to stay punchy */}
             <section id="inquiry-form" style={{ padding: "100px 0", backgroundColor: "var(--primary-900)" }}>
                 <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
                     <div style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -458,6 +451,9 @@ export default function PlantRentalPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

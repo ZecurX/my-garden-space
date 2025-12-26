@@ -21,12 +21,12 @@ const quickLinks = [
 ];
 
 const services = [
-    { label: "Landscaping", href: "/services/landscaping" },
-    { label: "Garden Maintenance", href: "/services/gardening-maintenance" },
-    { label: "Lawn Development", href: "/services/lawn-ground" },
-    { label: "Water Features", href: "/services/water-features" },
-    { label: "Vertical Gardens", href: "/services/vertical-green" },
-    { label: "Pergola & Gazebo", href: "/services/structural-decorative" },
+    { label: "Landscaping", href: "/services#landscaping" },
+    { label: "Garden Maintenance", href: "/services#gardening-maintenance" },
+    { label: "Lawn Development", href: "/services#lawn-ground" },
+    { label: "Water Features", href: "/services#water-features" },
+    { label: "Vertical Gardens", href: "/services#vertical-green" },
+    { label: "Pergola & Gazebo", href: "/services#structural-decorative" },
 ];
 
 const socialLinks = [

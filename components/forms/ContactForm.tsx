@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Send, CheckCircle } from "lucide-react";
 import { contactFormSchema, type ContactFormData } from "@/lib/validations";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -130,17 +130,17 @@ export default function ContactForm() {
             <Button
                 type="submit"
                 size="lg"
-                className="w-full"
-                isLoading={isSubmitting}
+                className="w-full bg-[var(--primary-600)] hover:bg-[var(--primary-700)] text-white"
+                disabled={isSubmitting}
             >
                 {isSubmitting ? (
                     <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <Loader2 className="w-5 h-5 animate-spin mr-2" />
                         Sending...
                     </>
                 ) : (
                     <>
-                        <Send className="w-5 h-5" />
+                        <Send className="w-5 h-5 mr-2" />
                         Send Message
                     </>
                 )}

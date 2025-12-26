@@ -65,7 +65,7 @@ export default function AboutPage() {
     return (
         <>
             {/* Hero & Stats Merged Section */}
-            <section style={{ padding: "180px 0 100px", backgroundColor: "var(--bg-cream)" }}>
+            <section style={{ padding: "180px 0 100px", backgroundColor: "white" }}>
                 <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px" }}>
 
                     {/* Hero Content */}
@@ -346,6 +346,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

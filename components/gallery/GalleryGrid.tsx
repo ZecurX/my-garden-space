@@ -71,7 +71,7 @@ const galleryImages = [
     },
     {
         id: 10,
-        src: "https://images.unsplash.com/photo-1558635924-f34f3d1f8ea4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        src: "https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         title: "Lawn Development",
         category: "residential",
         location: "Sarjapur Road",
@@ -100,9 +100,21 @@ const categories = [
     { key: "balcony", label: "Balcony/Terrace" },
 ];
 
-export default function GalleryGrid() {
-    const [activeFilter, setActiveFilter] = useState("all");
+// Export categories for use in page
+export { categories };
+
+interface GalleryGridProps {
+    activeFilter?: string;
+    onFilterChange?: (filter: string) => void;
+}
+
+export default function GalleryGrid({ activeFilter: propFilter, onFilterChange }: GalleryGridProps) {
+    const [internalFilter, setInternalFilter] = useState("all");
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+    // Use prop filter if provided, otherwise use internal state
+    const activeFilter = propFilter ?? internalFilter;
+    const setActiveFilter = onFilterChange ?? setInternalFilter;
 
     const filteredImages =
         activeFilter === "all"
@@ -127,26 +139,10 @@ export default function GalleryGrid() {
 
     return (
         <>
-            {/* Filter Pills */}
-            <div className="flex flex-wrap gap-2 justify-center mb-10">
-                {categories.map((cat) => (
-                    <button
-                        key={cat.key}
-                        onClick={() => setActiveFilter(cat.key)}
-                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeFilter === cat.key
-                                ? "bg-[var(--primary-600)] text-white shadow-md"
-                                : "bg-[var(--neutral-100)] text-[var(--text-secondary)] hover:bg-[var(--neutral-200)]"
-                            }`}
-                    >
-                        {cat.label}
-                    </button>
-                ))}
-            </div>
-
             {/* Gallery Grid */}
             <motion.div
                 layout
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
                 <AnimatePresence>
                     {filteredImages.map((image) => (
@@ -166,10 +162,10 @@ export default function GalleryGrid() {
                                 fill
                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all">
-                                <h3 className="text-white font-semibold">{image.title}</h3>
-                                <p className="text-white/70 text-sm">{image.location}</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute inset-0 flex flex-col justify-end p-8 text-center translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                <h3 className="text-white text-lg font-semibold mb-1">{image.title}</h3>
+                                <p className="text-white/80 text-sm">{image.location}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -240,14 +236,14 @@ export default function GalleryGrid() {
                                         fill
                                         className="object-contain"
                                     />
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                                        <h3 className="text-white text-xl font-semibold">
+                                    <div className="absolute bottom-0 left-0 right-0 p-8 text-center bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                                        <h3 className="text-white text-2xl font-bold mb-2">
                                             {
                                                 filteredImages.find((img) => img.id === selectedImage)!
                                                     .title
                                             }
                                         </h3>
-                                        <p className="text-white/70">
+                                        <p className="text-white/80 text-lg">
                                             {
                                                 filteredImages.find((img) => img.id === selectedImage)!
                                                     .location

@@ -78,7 +78,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen pt-28">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

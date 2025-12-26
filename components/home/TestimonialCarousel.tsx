@@ -102,21 +102,8 @@ export default function TestimonialCarousel() {
                                         <Quote className="w-24 h-24 text-[var(--primary-700)]" />
                                     </div>
 
-                                    {/* Client Image */}
-                                    <div className="flex-shrink-0">
-                                        <div className="relative w-24 h-24 md:w-28 md:h-28">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-400)] to-[var(--primary-600)] rounded-full scale-105 opacity-20" />
-                                            <Image
-                                                src={testimonials[currentIndex].image}
-                                                alt={testimonials[currentIndex].name}
-                                                fill
-                                                className="object-cover rounded-full border-4 border-white shadow-md"
-                                            />
-                                        </div>
-                                    </div>
-
                                     {/* Content */}
-                                    <div className="flex-1 text-center md:text-left">
+                                    <div className="flex-1 text-center">
                                         <StarRating rating={testimonials[currentIndex].rating} size="md" />
 
                                         <p className="mt-5 text-lg md:text-xl text-[var(--text-primary)] leading-relaxed">

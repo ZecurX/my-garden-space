@@ -1,49 +1,97 @@
-import { Metadata } from "next";
-import { Images } from "lucide-react";
-import GalleryGrid from "@/components/gallery/GalleryGrid";
+"use client";
 
-export const metadata: Metadata = {
-    title: "Gallery",
-    description:
-        "Browse our portfolio of completed gardening and landscaping projects in Bangalore. See transformations across residential, commercial, and event spaces.",
-};
+import { useState } from "react";
+import { Images } from "lucide-react";
+import GalleryGrid, { categories } from "@/components/gallery/GalleryGrid";
 
 export default function GalleryPage() {
+    const [activeFilter, setActiveFilter] = useState("all");
+
     return (
         <>
-            {/* Minimalist Hero Section */}
-            <section className="relative pt-40 pb-20 bg-white">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-                        <span
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary-100)] text-[var(--primary-700)] text-sm font-medium mb-6"
-                        >
-                            <Images className="w-4 h-4" />
+            {/* Hero Section - Cream style like About page */}
+            <section style={{ padding: "180px 0 100px", backgroundColor: "white" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+                    <div style={{ maxWidth: "900px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "24px"
+                        }}>
                             Our Portfolio
                         </span>
-                        <h1
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[var(--text-primary)] leading-tight"
-                        >
+
+                        <h1 style={{
+                            fontSize: "clamp(40px, 5vw, 64px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "32px",
+                            lineHeight: 1.1
+                        }}>
                             Our Green
                             <br />
-                            <span className="text-[var(--primary-600)]">Masterpieces</span>
+                            <span style={{ color: "var(--primary-600)" }}>Masterpieces</span>
                         </h1>
-                        <p
-                            className="text-lg text-[var(--text-secondary)] leading-relaxed"
-                            style={{ maxWidth: "600px" }}
-                        >
-                            A showcase of our finest work. Explore our collection of completed projects, from intimate home gardens to expansive corporate landscapes.
+
+                        <p style={{
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            marginBottom: "60px",
+                            maxWidth: "600px",
+                            lineHeight: 1.7,
+                            margin: "0 auto 60px"
+                        }}>
+                            Explore our collection of completed projects, from intimate home gardens to expansive corporate landscapes.
                         </p>
+
+                        {/* Filter Buttons - Updated for light background */}
+                        <div style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            justifyContent: "center",
+                            gap: "12px"
+                        }}>
+                            {categories.map((cat) => (
+                                <button
+                                    key={cat.key}
+                                    onClick={() => setActiveFilter(cat.key)}
+                                    style={{
+                                        padding: "12px 24px",
+                                        borderRadius: "999px",
+                                        fontSize: "14px",
+                                        fontWeight: 500,
+                                        border: "none",
+                                        cursor: "pointer",
+                                        transition: "all 0.3s ease",
+                                        backgroundColor: activeFilter === cat.key
+                                            ? "var(--primary-600)"
+                                            : "var(--neutral-100)",
+                                        color: activeFilter === cat.key
+                                            ? "white"
+                                            : "var(--text-secondary)",
+                                    }}
+                                >
+                                    {cat.label}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Main Gallery Grid */}
-            <section className="pb-24 pt-4 bg-white">
+            <section className="pb-32 pt-32 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
-                    <GalleryGrid />
+                    <GalleryGrid activeFilter={activeFilter} onFilterChange={setActiveFilter} />
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

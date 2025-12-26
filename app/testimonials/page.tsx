@@ -125,14 +125,6 @@ export default function TestimonialsPage() {
                                     &ldquo;{testimonial.quote}&rdquo;
                                 </p>
                                 <div className="flex items-center gap-4">
-                                    <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                                        <Image
-                                            src={testimonial.image}
-                                            alt={testimonial.name}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
                                     <div className="flex-1">
                                         <h4 className="font-semibold text-[var(--text-primary)]">
                                             {testimonial.name}
@@ -173,6 +165,9 @@ export default function TestimonialsPage() {
                     </Link>
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

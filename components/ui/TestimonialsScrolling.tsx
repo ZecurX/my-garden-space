@@ -8,7 +8,7 @@ import Image from "next/image";
 interface Testimonial {
     id: number;
     text: string;
-    image: string; // Avatar
+    image: string; // Avatar (Internal data kept, but not rendered)
     projectImage: string; // Feature Image
     name: string;
     role: string;
@@ -99,7 +99,7 @@ export default function TestimonialsSlideshow() {
 
                 <div style={{ height: '600px', position: 'relative', width: '100%' }}>
                     <Carousel
-                        baseWidth={380} // Slightly wider for new layout
+                        baseWidth={380}
                         autoplay={true}
                         autoplayDelay={4000}
                         pauseOnHover={true}
@@ -110,11 +110,11 @@ export default function TestimonialsSlideshow() {
                             <div key={t.id} style={{
                                 background: "white",
                                 borderRadius: "24px",
-                                height: "520px", // Fixed height
+                                height: "520px",
                                 width: "100%",
                                 display: "flex",
                                 flexDirection: "column",
-                                overflow: "hidden", // Clip image
+                                overflow: "hidden",
                                 boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
                                 border: "1px solid var(--neutral-100)",
                                 textAlign: "center"
@@ -127,7 +127,6 @@ export default function TestimonialsSlideshow() {
                                         fill
                                         style={{ objectFit: "cover" }}
                                     />
-                                    {/* Overlay gradient for better text contrast if needed, or just style */}
                                     <div style={{
                                         position: "absolute",
                                         bottom: 0,
@@ -161,11 +160,8 @@ export default function TestimonialsSlideshow() {
                                         &ldquo;{t.text}&rdquo;
                                     </p>
 
-                                    <div style={{ marginTop: "20px", display: "flex", alignItems: "center", gap: "12px", width: "100%", justifyContent: "flex-start", borderTop: "1px solid var(--neutral-100)", paddingTop: "16px" }}>
-                                        <div style={{ position: "relative", width: "40px", height: "40px", borderRadius: "50%", overflow: "hidden", flexShrink: 0 }}>
-                                            <Image src={t.image} alt={t.name} fill style={{ objectFit: "cover" }} />
-                                        </div>
-                                        <div style={{ textAlign: "left" }}>
+                                    <div style={{ marginTop: "20px", display: "flex", alignItems: "center", gap: "12px", width: "100%", justifyContent: "center", borderTop: "1px solid var(--neutral-100)", paddingTop: "16px" }}>
+                                        <div style={{ textAlign: "center" }}>
                                             <div style={{ fontSize: "14px", fontWeight: 600, color: "var(--text-primary)" }}>{t.name}</div>
                                             <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>{t.role}</div>
                                         </div>

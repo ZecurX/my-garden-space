@@ -25,6 +25,9 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <CTABanner />
+
+      {/* Visual Spacer */}
+      <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
     </>
   );
 }

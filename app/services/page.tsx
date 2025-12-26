@@ -65,7 +65,7 @@ const categories = [
             "Soil preparation & leveling",
         ],
         image:
-            "https://images.unsplash.com/photo-1558635924-f34f3d1f8ea4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
         icon: Fence,
@@ -149,7 +149,7 @@ export default function ServicesPage() {
             {/* Hero Section */}
             <section style={{
                 padding: "180px 0 100px",
-                backgroundColor: "var(--bg-cream)"
+                backgroundColor: "white"
             }}>
                 <div style={{
                     maxWidth: "1400px",
@@ -224,6 +224,7 @@ export default function ServicesPage() {
                             return (
                                 <div
                                     key={category.slug}
+                                    id={category.slug}
                                     style={{
                                         display: "grid",
                                         gridTemplateColumns: "1fr",
@@ -421,6 +422,9 @@ export default function ServicesPage() {
                     </Link>
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

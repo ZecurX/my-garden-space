@@ -6,7 +6,7 @@ import {
     Clock,
     MessageCircle,
 } from "lucide-react";
-import ContactForm from "@/components/forms/ContactForm";
+
 
 export const metadata: Metadata = {
     title: "Contact Us",
@@ -47,86 +47,175 @@ const contactInfo = [
 export default function ContactPage() {
     return (
         <>
-            {/* Hero Section */}
-            <section className="relative pt-40 pb-20 bg-[var(--bg-cream)]">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[var(--primary-600)] mb-6">
+            {/* Hero Section - White style */}
+            <section style={{ padding: "180px 0 100px", backgroundColor: "white" }}>
+                <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
+                    <div style={{ maxWidth: "900px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <span style={{
+                            display: "inline-block",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.15em",
+                            color: "var(--primary-600)",
+                            marginBottom: "24px"
+                        }}>
                             Get In Touch
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
+
+                        <h1 style={{
+                            fontSize: "clamp(40px, 5vw, 64px)",
+                            fontWeight: 700,
+                            color: "var(--text-primary)",
+                            marginBottom: "32px",
+                            lineHeight: 1.1
+                        }}>
                             Let&apos;s Talk About Your
                             <br />
-                            <span className="text-[var(--primary-600)]">Dream Garden</span>
+                            <span style={{ color: "var(--primary-600)" }}>Dream Garden</span>
                         </h1>
-                        <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto">
-                            Have a project in mind? Need a quote? We&apos;d love to hear from
-                            you. Reach out and we&apos;ll respond as soon as we can.
+
+                        <p style={{
+                            fontSize: "18px",
+                            color: "var(--text-secondary)",
+                            lineHeight: 1.7,
+                            maxWidth: "600px",
+                            margin: "0 auto"
+                        }}>
+                            Have a project in mind? Need a quote? We&apos;d love to hear from you. Reach out and we&apos;ll respond as soon as we can.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Contact Content */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6 lg:px-12">
-                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-                        {/* Contact Form */}
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-10 text-[var(--text-primary)]">
-                                Send Us a Message
+            <section className="pt-24 pb-0 bg-white">
+                <div className="container mx-auto px-6">
+                    <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+                        {/* Contact Info Header */}
+                        <div style={{ textAlign: "center", marginBottom: "60px" }}>
+                            <h2 style={{
+                                fontSize: "32px",
+                                fontWeight: 600,
+                                color: "var(--text-primary)",
+                                marginBottom: "16px"
+                            }}>
+                                Support Channels
                             </h2>
-                            <ContactForm />
+                            <p style={{ color: "var(--text-secondary)", fontSize: "16px" }}>
+                                We&apos;re here to help. Choose the most convenient way to reach us.
+                            </p>
                         </div>
 
-                        {/* Contact Info */}
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-10 text-[var(--text-primary)]">
-                                Contact Information
-                            </h2>
-
-                            <div className="space-y-6 mb-10">
-                                {contactInfo.map((item, index) => {
-                                    const Icon = item.icon;
-                                    return (
-                                        <div key={index} className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-[var(--neutral-50)] flex items-center justify-center flex-shrink-0">
-                                                <Icon className="w-5 h-5 text-[var(--primary-600)]" />
-                                            </div>
-                                            <div>
-                                                <h3 className="font-medium text-[var(--text-primary)] mb-0.5">
-                                                    {item.title}
-                                                </h3>
-                                                {item.href ? (
-                                                    <a
-                                                        href={item.href}
-                                                        className="text-[var(--primary-600)] hover:text-[var(--primary-700)] transition-colors"
-                                                    >
-                                                        {item.content}
-                                                    </a>
-                                                ) : (
-                                                    <p className="text-[var(--text-primary)]">
-                                                        {item.content}
-                                                    </p>
-                                                )}
-                                                <p className="text-sm text-[var(--text-muted)] mt-0.5">
-                                                    {item.description}
-                                                </p>
-                                            </div>
+                        {/* Contact Info Grid */}
+                        <div style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                            gap: "32px",
+                            marginBottom: "64px"
+                        }}>
+                            {contactInfo.map((item, index) => {
+                                const Icon = item.icon;
+                                return (
+                                    <div key={index} style={{
+                                        padding: "32px",
+                                        borderRadius: "24px",
+                                        backgroundColor: "var(--neutral-50)",
+                                        border: "1px solid var(--neutral-100)",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        textAlign: "center",
+                                        transition: "all 0.3s ease"
+                                    }}>
+                                        <div style={{
+                                            width: "60px",
+                                            height: "60px",
+                                            borderRadius: "18px",
+                                            backgroundColor: "white",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center",
+                                            marginBottom: "20px",
+                                            boxShadow: "0 10px 20px rgba(0,0,0,0.03)"
+                                        }}>
+                                            <Icon style={{ width: "24px", height: "24px", color: "var(--primary-600)" }} />
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                        <h3 style={{
+                                            fontSize: "18px",
+                                            fontWeight: 600,
+                                            color: "var(--text-primary)",
+                                            marginBottom: "8px"
+                                        }}>
+                                            {item.title}
+                                        </h3>
+                                        {item.href ? (
+                                            <a
+                                                href={item.href}
+                                                style={{
+                                                    color: "var(--primary-600)",
+                                                    fontWeight: 500,
+                                                    textDecoration: "none",
+                                                    fontSize: "16px",
+                                                    marginBottom: "4px"
+                                                }}
+                                            >
+                                                {item.content}
+                                            </a>
+                                        ) : (
+                                            <p style={{
+                                                color: "var(--text-primary)",
+                                                fontWeight: 500,
+                                                fontSize: "16px",
+                                                marginBottom: "4px"
+                                            }}>
+                                                {item.content}
+                                            </p>
+                                        )}
+                                        <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
 
-                            {/* WhatsApp Button */}
+                        {/* WhatsApp CTA */}
+                        <div style={{
+                            padding: "40px",
+                            borderRadius: "32px",
+                            backgroundColor: "var(--primary-950)",
+                            color: "white",
+                            textAlign: "center",
+                            marginBottom: "64px"
+                        }}>
+                            <h3 style={{ fontSize: "24px", fontWeight: 600, marginBottom: "16px" }}>
+                                Prefer a quick chat?
+                            </h3>
+                            <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "32px" }}>
+                                Message us on WhatsApp for instant support and fast quotes.
+                            </p>
                             <a
                                 href="https://wa.me/919880220257?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 px-6 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-full font-medium transition-colors w-full justify-center mb-10"
+                                style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: "12px",
+                                    padding: "20px 40px",
+                                    backgroundColor: "#22c55e",
+                                    color: "white",
+                                    borderRadius: "9999px",
+                                    fontWeight: 600,
+                                    fontSize: "16px",
+                                    textDecoration: "none",
+                                    transition: "all 0.2s ease",
+                                    boxShadow: "0 10px 30px rgba(34, 197, 94, 0.3)"
+                                }}
                             >
                                 <svg
-                                    className="w-5 h-5"
+                                    style={{ width: "24px", height: "24px" }}
                                     fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
@@ -134,23 +223,32 @@ export default function ContactPage() {
                                 </svg>
                                 Chat on WhatsApp
                             </a>
+                        </div>
 
-                            {/* Map */}
-                            <div className="rounded-2xl overflow-hidden h-[280px] border border-[var(--neutral-100)]">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1703420000000!5m2!1sen!2sin"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                />
-                            </div>
+                        {/* Map */}
+                        <div style={{
+                            height: "400px",
+                            borderRadius: "32px",
+                            overflow: "hidden",
+                            border: "1px solid var(--neutral-100)",
+                            boxShadow: "0 20px 40px rgba(0,0,0,0.05)"
+                        }}>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1703420000000!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Visual Spacer */}
+            <div style={{ height: "100px", backgroundColor: "var(--bg-cream)" }} />
         </>
     );
 }

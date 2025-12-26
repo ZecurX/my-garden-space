@@ -39,7 +39,7 @@ export default function Navbar() {
     const pathname = usePathname();
 
     // Pages that have a light/white background hero section
-    const lightBackgroundPages = ["/services", "/gallery", "/contact", "/about", "/testimonials", "/thank-you"];
+    const lightBackgroundPages = ["/services", "/gallery", "/contact", "/plant-rental", "/about", "/testimonials", "/thank-you"];
     const isLightPage = lightBackgroundPages.some(page => pathname.startsWith(page));
 
     // For light pages, always use dark text. For dark pages, use white text until scrolled.
@@ -195,7 +195,7 @@ export default function Navbar() {
                                                         {serviceCategories.map((category) => (
                                                             <Link
                                                                 key={category.slug}
-                                                                href={`/services/${category.slug}`}
+                                                                href={`/services#${category.slug}`}
                                                                 style={{
                                                                     display: "block",
                                                                     padding: "16px 20px",
@@ -415,7 +415,7 @@ export default function Navbar() {
                                                                 {serviceCategories.map((category) => (
                                                                     <Link
                                                                         key={category.slug}
-                                                                        href={`/services/${category.slug}`}
+                                                                        href={`/services#${category.slug}`}
                                                                         style={{
                                                                             display: "block",
                                                                             padding: "16px 20px",

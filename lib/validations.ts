@@ -56,7 +56,7 @@ export const rentalInquirySchema = z.object({
         .min(10, "Phone number must be at least 10 digits")
         .regex(/^[6-9]\d{9}$/, "Please enter a valid Indian phone number"),
     use_case: z.enum(["event", "office", "home", "exhibition"], {
-        errorMap: () => ({ message: "Please select a use case" }),
+        message: "Please select a use case",
     }),
     rental_start_date: z
         .string()
