@@ -3,8 +3,6 @@ import {
     Phone,
     Mail,
     MapPin,
-    Clock,
-    MessageCircle,
 } from "lucide-react";
 
 
@@ -18,9 +16,9 @@ const contactInfo = [
     {
         icon: Phone,
         title: "Phone",
-        content: "+91 98802 20257",
-        href: "tel:+919880220257",
-        description: "Mon-Sat, 9am-6pm",
+        content: "+91 95385 27433",
+        href: "tel:+919538527433",
+        description: "Available Mon-Sat",
     },
     {
         icon: Mail,
@@ -33,14 +31,8 @@ const contactInfo = [
         icon: MapPin,
         title: "Location",
         content: "Bangalore, Karnataka",
-        href: "https://maps.google.com/?q=Bangalore",
+        href: "https://share.google/Ayxa3HSA85KZ9VRp8",
         description: "Serving all areas",
-    },
-    {
-        icon: Clock,
-        title: "Business Hours",
-        content: "Mon - Sat: 9AM - 6PM",
-        description: "Sunday: Closed",
     },
 ];
 
@@ -196,7 +188,7 @@ export default function ContactPage() {
                                 Message us on WhatsApp for instant support and fast quotes.
                             </p>
                             <a
-                                href="https://wa.me/919880220257?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
+                                href="https://wa.me/919538527433?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
@@ -234,7 +226,7 @@ export default function ContactPage() {
                             boxShadow: "0 20px 40px rgba(0,0,0,0.05)"
                         }}>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1703420000000!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5949417266366!2d77.56370577609892!3d13.01091171407612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17dbcfcf0a11%3A0x901e4e8f00e1e1e1!2sMy%20Garden%20Space!5e0!3m2!1sen!2sin!4v1703420000000!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

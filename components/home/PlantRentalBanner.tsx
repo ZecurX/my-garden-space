@@ -109,10 +109,10 @@ export default function PlantRentalBanner() {
                         {/* Benefits Grid */}
                         <div style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(2, 1fr)",
-                            gap: "40px",
+                            gridTemplateColumns: "1fr",
+                            gap: "32px",
                             marginBottom: "56px"
-                        }}>
+                        }} className="sm:!grid-cols-2 sm:!gap-40">
                             {benefits.map((benefit, index) => {
                                 const Icon = benefit.icon;
                                 return (

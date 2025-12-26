@@ -177,7 +177,7 @@ export default function AboutPage() {
                             <div className="space-y-5 text-[var(--text-secondary)] leading-relaxed">
                                 <br />
                                 <p>
-                                    Founded in 2014, My Garden Space began with a simple vision:
+                                    Founded in 2018, My Garden Space began with a simple vision:
                                     to bring the beauty of nature into every home and business.
                                     What started as a small gardening service has grown into a
                                     comprehensive landscaping and plant rental company serving

@@ -4,11 +4,7 @@ import {
     Phone,
     Mail,
     MapPin,
-    Clock,
-    Facebook,
     Instagram,
-    Twitter,
-    Youtube,
 } from "lucide-react";
 
 const quickLinks = [
@@ -30,10 +26,7 @@ const services = [
 ];
 
 const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/mygardenspace7?igsh=MW04MG50cjF5cjNmaA==", label: "Instagram" },
 ];
 
 export default function Footer() {
@@ -197,7 +190,7 @@ export default function Footer() {
                         <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                             <li style={{ marginBottom: "24px" }}>
                                 <a
-                                    href="tel:+919880220257"
+                                    href="tel:+919538527433"
                                     style={{
                                         display: "flex",
                                         alignItems: "flex-start",
@@ -212,7 +205,7 @@ export default function Footer() {
                                         marginTop: "2px",
                                         color: "var(--primary-400)"
                                     }} />
-                                    <span style={{ fontSize: "16px" }}>+91 98802 20257</span>
+                                    <span style={{ fontSize: "16px" }}>+91 95385 27433</span>
                                 </a>
                             </li>
                             <li style={{ marginBottom: "24px" }}>
@@ -253,29 +246,10 @@ export default function Footer() {
                                     Bangalore, Karnataka, India
                                 </span>
                             </li>
-                            <li style={{
-                                marginBottom: "24px",
-                                display: "flex",
-                                alignItems: "flex-start",
-                                gap: "20px",
-                                color: "rgba(255,255,255,0.75)"
-                            }}>
-                                <Clock style={{
-                                    width: "24px",
-                                    height: "24px",
-                                    marginTop: "2px",
-                                    color: "var(--primary-400)",
-                                    flexShrink: 0
-                                }} />
-                                <span style={{ fontSize: "16px" }}>
-                                    Mon - Sat: 9:00 AM - 6:00 PM
-                                </span>
-                            </li>
                         </ul>
 
-                        {/* WhatsApp Button */}
                         <a
-                            href="https://wa.me/919880220257?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
+                            href="https://wa.me/919538527433?text=Hi%2C%20I%27m%20interested%20in%20your%20gardening%20services"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{

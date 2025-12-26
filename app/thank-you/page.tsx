@@ -68,7 +68,7 @@ export default function ThankYouPage() {
                     <p className="mt-8 text-sm text-[var(--text-muted)] animate-fade-in-up delay-400">
                         Need immediate assistance?{" "}
                         <a
-                            href="https://wa.me/919880220257"
+                            href="https://wa.me/919538527433"
                             className="text-[var(--primary-600)] hover:underline"
                         >
                             Chat with us on WhatsApp
