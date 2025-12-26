@@ -140,7 +140,7 @@ const GardenNavbar = ({
         { name: "FAQ", url: "/faq" },
     ],
     cta = {
-        phone: { text: "+91 98802 20257", url: "tel:+919880220257" },
+        phone: { text: "+91 95385 27433", url: "tel:+919538527433" },
         quote: { text: "Get Quote", url: "/contact" },
     },
 }: GardenNavbarProps) => {

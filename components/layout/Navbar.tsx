@@ -228,7 +228,7 @@ export default function Navbar() {
                             gap: "32px"
                         }} className="lg:!flex">
                             <a
-                                href="tel:+919880220257"
+                                href="tel:+919538527433"
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -239,7 +239,7 @@ export default function Navbar() {
                                 }}
                             >
                                 <Phone style={{ width: "20px", height: "20px" }} />
-                                <span style={{ fontSize: "14px", fontWeight: 500 }}>+91 98802 20257</span>
+                                <span style={{ fontSize: "14px", fontWeight: 500 }}>+91 95385 27433</span>
                             </a>
                             <Link
                                 href="/contact"
@@ -468,7 +468,7 @@ export default function Navbar() {
                             gap: "20px"
                         }}>
                             <a
-                                href="tel:+919880220257"
+                                href="tel:+919538527433"
                                 style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -483,7 +483,7 @@ export default function Navbar() {
                                 }}
                             >
                                 <Phone style={{ width: "20px", height: "20px", color: "var(--primary-600)" }} />
-                                +91 98802 20257
+                                +91 95385 27433
                             </a>
                             <Link
                                 href="/contact"

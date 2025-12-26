@@ -57,7 +57,7 @@ export default function ThankYouPage() {
                             Back to Home
                         </Link>
                         <a
-                            href="tel:+919880220257"
+                            href="tel:+919538527433"
                             className="btn btn-outline btn-lg"
                         >
                             <Phone className="w-5 h-5" />

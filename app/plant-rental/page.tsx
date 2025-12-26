@@ -154,7 +154,7 @@ export default function PlantRentalPage() {
                                 Request Plants
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
-                            <a href="tel:+919880220257" className="btn btn-outline btn-lg">
+                            <a href="tel:+919538527433" className="btn btn-outline btn-lg">
                                 Call to Discuss
                             </a>
                         </div>

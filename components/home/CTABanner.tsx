@@ -114,7 +114,7 @@ export default function CTABanner() {
                             <ArrowRight style={{ width: "20px", height: "20px" }} />
                         </Link>
                         <a
-                            href="tel:+919880220257"
+                            href="tel:+919538527433"
                             style={{
                                 display: "inline-flex",
                                 alignItems: "center",
