@@ -22,6 +22,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mygardenspace.com"),
   title: {
     default: "My Garden Space | Professional Gardening & Landscaping Services",
     template: "%s | My Garden Space",

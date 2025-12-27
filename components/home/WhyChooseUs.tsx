@@ -115,20 +115,20 @@ export default function WhyChooseUs() {
                     {/* First set of logos */}
                     <motion.div
                         animate={{
-                            x: [0, -280 * clientLogos.length],
+                            x: [0, -320 * clientLogos.length], // Adjusted based on new min-width (240px) + gap (80px)
                         }}
                         transition={{
                             x: {
                                 repeat: Infinity,
                                 repeatType: "loop",
-                                duration: 20,
+                                duration: 25, // Slightly slower for larger logos
                                 ease: "linear",
                             },
                         }}
                         style={{
                             display: "flex",
-                            gap: "30px",
-                            paddingRight: "30px",
+                            gap: "80px", // Increased gap
+                            paddingRight: "80px",
                         }}
                     >
                         {/* Duplicate logos for seamless loop */}
@@ -139,21 +139,24 @@ export default function WhyChooseUs() {
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    minWidth: "200px",
-                                    height: "80px",
-                                    padding: "15px 30px",
+                                    minWidth: "240px", // Larger container
+                                    height: "120px", // Larger height
+                                    padding: "20px 40px",
                                     backgroundColor: "white",
-                                    borderRadius: "12px",
+                                    borderRadius: "16px",
+                                    // Use CSS class for mobile adjustments if needed, but keeping it inline for consistency with existing code
                                 }}
+                                className="!min-w-[180px] !h-[80px] sm:!min-w-[240px] sm:!h-[120px]"
                             >
                                 <img
                                     src={logo.src}
                                     alt={logo.name}
                                     style={{
-                                        maxWidth: "160px",
-                                        maxHeight: "50px",
+                                        maxWidth: "200px", // Larger logo
+                                        maxHeight: "80px", // Larger logo
                                         objectFit: "contain",
                                     }}
+                                    className="!max-w-[140px] !max-h-[50px] sm:!max-w-[200px] sm:!max-h-[80px]"
                                 />
                             </div>
                         ))}
