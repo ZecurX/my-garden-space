@@ -5,13 +5,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
-  const scrollToContent = () => {
-    const element = document.getElementById("services-section");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section style={{
       position: "relative",
@@ -145,55 +138,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.button
-        onClick={scrollToContent}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        style={{
-          position: "absolute",
-          bottom: "48px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-          color: "rgba(255,255,255,0.6)",
-          cursor: "pointer",
-          background: "none",
-          border: "none"
-        }}
-        aria-label="Scroll to content"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          style={{
-            width: "28px",
-            height: "48px",
-            borderRadius: "9999px",
-            border: "2px solid rgba(255,255,255,0.4)",
-            display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            padding: "8px"
-          }}
-        >
-          <motion.div
-            animate={{ y: [0, 16, 0], opacity: [1, 0.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              width: "6px",
-              height: "10px",
-              backgroundColor: "rgba(255,255,255,0.7)",
-              borderRadius: "9999px"
-            }}
-          />
-        </motion.div>
-      </motion.button>
     </section>
   );
 }
