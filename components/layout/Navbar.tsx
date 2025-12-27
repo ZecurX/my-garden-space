@@ -95,8 +95,9 @@ export default function Navbar() {
                             <Image
                                 src="/Screenshot_2025-12-27_153722-removebg-preview.png"
                                 alt="My Garden Space Logo"
-                                width={52}
-                                height={52}
+                                width={64}
+                                height={64}
+                                className="w-16 h-16 sm:w-14 sm:h-14 lg:w-[52px] lg:h-[52px]"
                                 style={{
                                     objectFit: "contain"
                                 }}
@@ -314,8 +315,8 @@ export default function Navbar() {
                                 <Image
                                     src="/Screenshot_2025-12-27_153722-removebg-preview.png"
                                     alt="My Garden Space Logo"
-                                    width={48}
-                                    height={48}
+                                    width={60}
+                                    height={60}
                                     style={{
                                         objectFit: "contain"
                                     }}

@@ -186,10 +186,10 @@ const GardenNavbar = ({
                 <div className="block lg:hidden">
                     <div className="flex items-center justify-between">
                         <Link href={logo.url} className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-[var(--primary-600)] flex items-center justify-center">
-                                <Leaf className="w-5 h-5 text-white" />
+                            <div className="w-12 h-12 rounded-full bg-[var(--primary-600)] flex items-center justify-center">
+                                <Leaf className="w-6 h-6 text-white" />
                             </div>
-                            <span className="text-lg font-semibold text-[var(--text-primary)]">
+                            <span className="text-xl font-semibold text-[var(--text-primary)]">
                                 {logo.title}
                             </span>
                         </Link>
@@ -203,10 +203,10 @@ const GardenNavbar = ({
                                 <SheetHeader>
                                     <SheetTitle>
                                         <Link href={logo.url} className="flex items-center gap-3">
-                                            <div className="w-10 h-10 rounded-full bg-[var(--primary-600)] flex items-center justify-center">
-                                                <Leaf className="w-5 h-5 text-white" />
+                                            <div className="w-12 h-12 rounded-full bg-[var(--primary-600)] flex items-center justify-center">
+                                                <Leaf className="w-6 h-6 text-white" />
                                             </div>
-                                            <span className="text-lg font-semibold text-[var(--text-primary)]">
+                                            <span className="text-xl font-semibold text-[var(--text-primary)]">
                                                 {logo.title}
                                             </span>
                                         </Link>
