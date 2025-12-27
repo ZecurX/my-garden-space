@@ -293,11 +293,33 @@ export default function Footer() {
                     <p style={{
                         color: "rgba(255,255,255,0.6)",
                         fontSize: "15px",
-                        textAlign: "center"
-                    }}>
+                        textAlign: "center",
+                        flex: 1
+                    }} className="md:!text-left">
                         © {currentYear} My Garden Space. All rights reserved.
                     </p>
-                    <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
+                    <a
+                        href="https://zecurx.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: "rgba(255,255,255,0.6)",
+                            fontSize: "15px",
+                            textDecoration: "none",
+                            transition: "color 0.2s ease"
+                        }}
+                        className="hover:text-white"
+                    >
+                        Developed by <span style={{ color: "#ef4444" }}>Z</span>ecur<span style={{ color: "#ef4444" }}>X</span>
+                    </a>
+                    <div style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "40px",
+                        flex: 1,
+                        justifyContent: "flex-end",
+                        paddingRight: "80px" // Space for WhatsApp button
+                    }}>
                         <Link
                             href="/privacy-policy"
                             style={{
