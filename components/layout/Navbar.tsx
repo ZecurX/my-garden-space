@@ -89,7 +89,7 @@ export default function Navbar() {
                         <Link href="/" style={{
                             display: "flex",
                             alignItems: "center",
-                            gap: "16px",
+                            gap: "12px",
                             textDecoration: "none"
                         }}>
                             <Image
@@ -97,19 +97,20 @@ export default function Navbar() {
                                 alt="My Garden Space Logo"
                                 width={64}
                                 height={64}
-                                className="w-16 h-16 sm:w-14 sm:h-14 lg:w-[52px] lg:h-[52px]"
+                                className="w-14 h-14 sm:w-12 sm:h-12 lg:w-[52px] lg:h-[52px]"
                                 style={{
                                     objectFit: "contain"
                                 }}
                             />
                             <span
                                 style={{
-                                    fontSize: "22px",
                                     fontWeight: 600,
                                     letterSpacing: "-0.02em",
                                     color: useDarkText ? "var(--text-primary)" : "white",
-                                    transition: "color 0.3s ease"
+                                    transition: "color 0.3s ease",
+                                    whiteSpace: "nowrap"
                                 }}
+                                className="text-base lg:text-[22px]"
                             >
                                 My Garden Space
                             </span>
