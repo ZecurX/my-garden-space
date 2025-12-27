@@ -80,24 +80,22 @@ export default function Navbar() {
                     margin: "0 auto",
                     padding: "0 40px",
                 }}>
-                    <nav style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between"
-                    }}>
+                    <nav
+                        className="flex items-center justify-between w-full lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center"
+                    >
                         {/* Logo */}
                         <Link href="/" style={{
                             display: "flex",
                             alignItems: "center",
                             gap: "12px",
-                            textDecoration: "none"
-                        }}>
+                            textDecoration: "none",
+                        }} className="lg:justify-self-start">
                             <Image
                                 src="/Screenshot_2025-12-27_153722-removebg-preview.png"
                                 alt="My Garden Space Logo"
-                                width={64}
-                                height={64}
-                                className="w-14 h-14 sm:w-12 sm:h-12 lg:w-[52px] lg:h-[52px]"
+                                width={120} // Increased source width for sharpness
+                                height={120}
+                                className="w-20 h-20 sm:w-20 sm:h-20 lg:w-24 lg:h-24" // Mobile: 80px, Desktop: 96px
                                 style={{
                                     objectFit: "contain"
                                 }}
@@ -110,7 +108,7 @@ export default function Navbar() {
                                     transition: "color 0.3s ease",
                                     whiteSpace: "nowrap"
                                 }}
-                                className="text-base lg:text-[22px]"
+                                className="text-lg lg:text-[24px]"
                             >
                                 My Garden Space
                             </span>
@@ -120,8 +118,8 @@ export default function Navbar() {
                         <div style={{
                             display: "none",
                             alignItems: "center",
-                            gap: "12px"
-                        }} className="lg:!flex">
+                            gap: "12px",
+                        }} className="lg:!flex lg:justify-self-center">
                             {navItems.map((item) => (
                                 <div
                                     key={item.href}
@@ -135,9 +133,9 @@ export default function Navbar() {
                                             display: "flex",
                                             alignItems: "center",
                                             gap: "8px",
-                                            padding: "14px 24px",
-                                            fontSize: "15px",
-                                            fontWeight: 500,
+                                            padding: "8px 16px", // Balanced padding
+                                            fontSize: "15px", // 15px is the "sweet spot" for this width
+                                            fontWeight: 600,
                                             borderRadius: "9999px",
                                             textDecoration: "none",
                                             transition: "all 0.2s ease",
@@ -146,7 +144,8 @@ export default function Navbar() {
                                                 : useDarkText ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
                                             backgroundColor: pathname === item.href || (item.hasDropdown && pathname.startsWith("/services"))
                                                 ? useDarkText ? "var(--primary-50)" : "rgba(255,255,255,0.15)"
-                                                : "transparent"
+                                                : "transparent",
+                                            whiteSpace: "nowrap" // Prevent wrapping like "Plant Rental"
                                         }}
                                     >
                                         {item.label}
@@ -217,8 +216,8 @@ export default function Navbar() {
                         <div style={{
                             display: "none",
                             alignItems: "center",
-                            gap: "32px"
-                        }} className="lg:!flex">
+                            gap: "24px",
+                        }} className="lg:!flex lg:justify-self-end">
                             <a
                                 href="tel:+919538527433"
                                 style={{
@@ -227,11 +226,12 @@ export default function Navbar() {
                                     gap: "12px",
                                     color: useDarkText ? "var(--text-secondary)" : "rgba(255,255,255,0.85)",
                                     textDecoration: "none",
-                                    transition: "color 0.2s ease"
+                                    transition: "color 0.2s ease",
+                                    whiteSpace: "nowrap"
                                 }}
                             >
-                                <Phone style={{ width: "20px", height: "20px" }} />
-                                <span style={{ fontSize: "14px", fontWeight: 500 }}>+91 95385 27433</span>
+                                <Phone style={{ width: "22px", height: "22px" }} />
+                                <span style={{ fontSize: "16px", fontWeight: 600 }}>+91 95385 27433</span>
                             </a>
                             <Link
                                 href="/contact"
@@ -243,7 +243,8 @@ export default function Navbar() {
                                     textDecoration: "none",
                                     transition: "all 0.2s ease",
                                     backgroundColor: useDarkText ? "var(--primary-700)" : "white",
-                                    color: useDarkText ? "white" : "var(--text-primary)"
+                                    color: useDarkText ? "white" : "var(--text-primary)",
+                                    whiteSpace: "nowrap"
                                 }}
                             >
                                 Get Quote
@@ -316,8 +317,9 @@ export default function Navbar() {
                                 <Image
                                     src="/Screenshot_2025-12-27_153722-removebg-preview.png"
                                     alt="My Garden Space Logo"
-                                    width={60}
-                                    height={60}
+                                    width={100}
+                                    height={100}
+                                    className="w-20 h-20" // Match mobile navbar size (80px)
                                     style={{
                                         objectFit: "contain"
                                     }}
