@@ -79,7 +79,7 @@ export default function ServiceHighlights() {
             id="services-section"
             style={{
                 padding: "140px 0",
-                backgroundColor: "var(--bg-cream)"
+                backgroundColor: "white"
             }}
         >
             <div style={{

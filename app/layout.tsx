@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     "lawn development",
   ],
   authors: [{ name: "My Garden Space" }],
+  icons: {
+    icon: "/Screenshot_2025-12-27_153722-removebg-preview.png",
+    shortcut: "/Screenshot_2025-12-27_153722-removebg-preview.png",
+    apple: "/Screenshot_2025-12-27_153722-removebg-preview.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",

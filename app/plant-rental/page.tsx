@@ -386,7 +386,7 @@ export default function PlantRentalPage() {
                             />
                         </div>
 
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "48px", maxWidth: "1200px", margin: "0 auto" }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12" style={{ maxWidth: "1200px", margin: "0 auto" }}>
                             {[
                                 {
                                     label: "Flexible Duration",

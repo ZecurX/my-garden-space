@@ -9,8 +9,8 @@ import {
     X,
     ChevronDown,
     Phone,
-    Leaf,
 } from "lucide-react";
+import Image from "next/image";
 
 const serviceCategories = [
     { name: "Gardening & Maintenance", slug: "gardening-maintenance" },
@@ -92,25 +92,15 @@ export default function Navbar() {
                             gap: "16px",
                             textDecoration: "none"
                         }}>
-                            <div
+                            <Image
+                                src="/Screenshot_2025-12-27_153722-removebg-preview.png"
+                                alt="My Garden Space Logo"
+                                width={52}
+                                height={52}
                                 style={{
-                                    width: "52px",
-                                    height: "52px",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    backgroundColor: useDarkText ? "var(--primary-600)" : "rgba(255,255,255,0.2)",
-                                    backdropFilter: useDarkText ? "none" : "blur(10px)",
-                                    transition: "all 0.3s ease"
+                                    objectFit: "contain"
                                 }}
-                            >
-                                <Leaf style={{
-                                    width: "26px",
-                                    height: "26px",
-                                    color: "white"
-                                }} />
-                            </div>
+                            />
                             <span
                                 style={{
                                     fontSize: "22px",
@@ -321,17 +311,15 @@ export default function Navbar() {
                                 gap: "16px",
                                 textDecoration: "none"
                             }}>
-                                <div style={{
-                                    width: "48px",
-                                    height: "48px",
-                                    backgroundColor: "var(--primary-600)",
-                                    borderRadius: "50%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center"
-                                }}>
-                                    <Leaf style={{ width: "24px", height: "24px", color: "white" }} />
-                                </div>
+                                <Image
+                                    src="/Screenshot_2025-12-27_153722-removebg-preview.png"
+                                    alt="My Garden Space Logo"
+                                    width={48}
+                                    height={48}
+                                    style={{
+                                        objectFit: "contain"
+                                    }}
+                                />
                                 <span style={{
                                     fontSize: "20px",
                                     fontWeight: 600,
