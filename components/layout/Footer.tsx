@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-    Leaf,
     Phone,
     Mail,
     MapPin,
@@ -54,17 +54,15 @@ export default function Footer() {
                             marginBottom: "40px",
                             textDecoration: "none"
                         }}>
-                            <div style={{
-                                width: "60px",
-                                height: "60px",
-                                backgroundColor: "rgba(255,255,255,0.1)",
-                                borderRadius: "50%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center"
-                            }}>
-                                <Leaf style={{ width: "30px", height: "30px", color: "white" }} />
-                            </div>
+                            <Image
+                                src="/Screenshot_2025-12-27_153722-removebg-preview.png"
+                                alt="My Garden Space Logo"
+                                width={60}
+                                height={60}
+                                style={{
+                                    objectFit: "contain"
+                                }}
+                            />
                             <span
                                 style={{
                                     fontSize: "24px",
