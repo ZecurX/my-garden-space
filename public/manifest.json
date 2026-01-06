@@ -1,0 +1,35 @@
+{
+  "name": "My Garden Space",
+  "short_name": "My Garden Space",
+  "description": "Professional gardening, landscaping, and plant rental services in Bangalore",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E7D32",
+  "orientation": "portrait-primary",
+  "categories": ["business", "lifestyle", "home"],
+  "icons": [
+    {
+      "src": "/Screenshot_2025-12-27_153722-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Screenshot_2025-12-27_153722-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
